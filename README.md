@@ -29,20 +29,6 @@ belongs_to :user
 
 
 
-##petsテーブル
-
-|Column                                | Type     | Options                        |
-|--------------------------------------|----------|--------------------------------|
-|user                                  |references|null:false,foreign_key:true     |
-|birth                                 |	date    |	null:false                     |
-|bleed_id                              | integer  |null:false                      |
-
-#Association
-belongs_to: user
-has_many :likes
-
-
-
 ##tweetsテーブル
 |Column        | Type      |Options                    |
 |--------------|-----------|---------------------------|
@@ -50,8 +36,10 @@ has_many :likes
 |text          |text       |null:false                 |
 
 
-belongs_to :user
 
+belongs_to :user
+has_many: comments 
+has_many :likes
 
 ##commentsテーブル
 |Column        | Type      |Options                    |
