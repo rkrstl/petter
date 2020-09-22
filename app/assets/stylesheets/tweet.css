@@ -1,0 +1,133 @@
+
+
+.site a{
+  text-decoration: none;
+  color: darksalmon;
+}
+
+.site{
+  padding: 10px;
+  font-size: 30px;
+}
+
+/* ナビゲーション */
+.menu{
+  background-color:gainsboro;
+  width: auto;
+  height: 50px;
+}
+menu ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li a{
+  display: block;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.menu ul:after{
+  content: "";
+  display: block;
+  clear: auto;
+}
+.menu li{
+  float: left;
+  width: auto;
+}
+
+
+
+
+
+.boxA:after{
+   content:"";
+   display: block;
+   clear: both;
+
+}
+
+.container{
+  
+ color:white;
+ font-size: 30px;
+ font-weight: bold;
+  width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  
+  /* background-color:wheat; */
+}
+
+
+
+.tweet1{
+  float: left;
+  width: 15%;
+  /* background-color: blueviolet; */
+  height: 100px;
+
+}
+
+.tweet2{
+  
+  float: left;
+  width: 70%;
+  height:350px;
+  text-align: center;
+  
+  /* background-color: darkgray; */
+
+}
+
+.title{
+  
+  color: darkgray;
+  padding: 15px;
+  margin: 30px;
+}
+
+.listings{
+  color: rgba(30, 22, 54, 0.6);
+  box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px;
+  background-color: #FFF5EE; /* 背景色 */
+ box-shadow: 0 0 5px 1px #ccc; /* 影 */
+  padding: 20px;
+  width: 300px;
+  margin: 10px auto;
+  
+}
+
+
+
+
+.search{
+  
+  padding: 20px;
+  margin: 0 auto;
+  width: 300px;
+  background-color: #FFF5EE; /* 背景色 */
+  box-shadow: 0 0 5px 1px #ccc; /* 影 */
+}
+
+
+
+
+.tweet3{
+  height: 300px;
+  float: left;
+  width: 15%;
+  /* background-color: cornflowerblue; */
+}
+
+.pet{
+  height: 300px;
+  width: 100%;
+  background-color:whitesmoke;
+}
+
+
