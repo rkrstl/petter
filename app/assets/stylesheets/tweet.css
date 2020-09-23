@@ -1,7 +1,9 @@
 
+a {
+  text-decoration: none;
+}
 
 .site a{
-  text-decoration: none;
   color: darksalmon;
 }
 
@@ -27,7 +29,6 @@ menu ul{
   padding: 10px;
   color: black;
   font-size: 15px;
-  text-decoration: none;
 }
 
 .menu ul:after{
@@ -98,20 +99,22 @@ menu ul{
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
-  margin: 10px auto;
-  
+  margin: 10px auto;  
+  opacity: 0.7;
+}
+
+.listings:hover{
+  opacity: 1;
 }
 
 
-
-
 .search{
-  
   padding: 20px;
   margin: 0 auto;
   width: 300px;
   background-color: #FFF5EE; /* 背景色 */
   box-shadow: 0 0 5px 1px #ccc; /* 影 */
+  
 }
 
 
