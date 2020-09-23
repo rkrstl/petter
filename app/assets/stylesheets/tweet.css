@@ -17,7 +17,7 @@ a {
 .box2{
   background-color:gainsboro;
   width: auto;
-  height: 50px;
+  height: 43px;
   list-style: none;
 
 }
@@ -40,6 +40,11 @@ menu ul{
   float: right;
   width: auto;
 }
+
+.menu li:hover{
+  background-color: gray;
+}
+
 
 
 .menu2 li a{
