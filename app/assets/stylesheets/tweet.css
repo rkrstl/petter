@@ -1,7 +1,9 @@
 
+a {
+  text-decoration: none;
+}
 
 .site a{
-  text-decoration: none;
   color: darksalmon;
 }
 
@@ -11,15 +13,19 @@
 }
 
 /* ナビゲーション */
-.menu{
+
+.box2{
   background-color:gainsboro;
   width: auto;
-  height: 50px;
+  height: 43px;
+  list-style: none;
+
 }
+
 menu ul{
   margin: 0;
   padding: 0;
-  list-style: none;
+ 
 }
 
 .menu li a{
@@ -27,19 +33,31 @@ menu ul{
   padding: 10px;
   color: black;
   font-size: 15px;
-  text-decoration: none;
 }
 
-.menu ul:after{
-  content: "";
-  display: block;
-  clear: auto;
-}
+
 .menu li{
-  float: left;
+  float: right;
   width: auto;
 }
 
+.menu li:hover{
+  background-color: gray;
+}
+
+
+
+.menu2 li a{
+  display: block;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  
+}
+
+.menu2{
+  float: left;
+}
 
 
 
@@ -98,20 +116,22 @@ menu ul{
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
-  margin: 10px auto;
-  
+  margin: 10px auto;  
+  opacity: 0.7;
+}
+
+.listings:hover{
+  opacity: 1;
 }
 
 
-
-
 .search{
-  
   padding: 20px;
   margin: 0 auto;
   width: 300px;
   background-color: #FFF5EE; /* 背景色 */
   box-shadow: 0 0 5px 1px #ccc; /* 影 */
+  
 }
 
 
