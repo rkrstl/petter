@@ -13,15 +13,19 @@ a {
 }
 
 /* ナビゲーション */
-.menu{
+
+.box2{
   background-color:gainsboro;
   width: auto;
   height: 50px;
+  list-style: none;
+
 }
+
 menu ul{
   margin: 0;
   padding: 0;
-  list-style: none;
+ 
 }
 
 .menu li a{
@@ -31,16 +35,24 @@ menu ul{
   font-size: 15px;
 }
 
-.menu ul:after{
-  content: "";
-  display: block;
-  clear: auto;
-}
+
 .menu li{
-  float: left;
+  float: right;
   width: auto;
 }
 
+
+.menu2 li a{
+  display: block;
+  padding: 10px;
+  color: black;
+  font-size: 15px;
+  
+}
+
+.menu2{
+  float: left;
+}
 
 
 
