@@ -7,9 +7,9 @@
 |password        |	string|	null:false  |
 |birth           |	date  |	null:false  |
 |e-mail	         |string	|null:false   |
-|introduction    | text     |null:false |        
-|bleed_id        | integer  |null:false | 
-|pet-name        | string   |null:false |
+|introduction    | text   |null:false   |        
+|bleed_id        |integer |null:false   | 
+|pet-name        | string |null:false   |
 
 ##Association
 has_many :comments 
