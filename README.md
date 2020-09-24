@@ -7,24 +7,17 @@
 |password        |	string|	null:false  |
 |birth           |	date  |	null:false  |
 |e-mail	         |string	|null:false   |
+|introduction    | text     |null:false |        
+|bleed_id        | integer  |null:false | 
+|pet-name        | string   |null:false |
 
 ##Association
-has_one :my-page
 has_many :comments 
 has_many :likes
 has_many :tweets
 
 
-my-pagesテーブル
-|Column                                | Type     | Options                        |
-|--------------------------------------|----------|--------------------------------|
-|user                                  |references|null:false,foreign_key:true     |
-|introduction                          | text     |null:false                      |        
-|bleed_id                              | integer  |null:false                      | 
-|pet-name                              | string   |null:false                      |
 
-#Association
-belongs_to :user
 
 
 
@@ -32,6 +25,7 @@ belongs_to :user
 ##tweetsテーブル
 |Column        | Type      |Options                    |
 |--------------|-----------|---------------------------|
+|user          |references |null:false,foreign_key:true|
 |title         |string     |null:false                 |
 |text          |text       |null:false                 |
 
