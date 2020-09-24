@@ -21,6 +21,7 @@
 
 
   <div class="tweet1">
+  ぽkぽk
   </div>
 
 
@@ -44,17 +45,29 @@
   </div>
 
   <div class="tweet3">
+  右のところ
   </div>
 
 </div>
 
-<div class="pet">
-asd
-</div>
+  <div class="pet">
+　　<% @tweets.each do |tweet| %>
+     <li class="petlist">
+     <%= link_to root_path do %>
+      <div class="pet-image-content">
+      <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image"%>
+      </div>
+
+    <div class="tweet-info">
+        <h3 class="tweet-title">
+          <%= tweet.title%>
+        </h3>
+    </div>
+    <%end%>
+    <%end%>
+  </div>
+
 
 
 <div class="box5">
-
-
-
 </div>
