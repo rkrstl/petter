@@ -53,7 +53,7 @@
   <div class="pet">
 　　<% @tweets.each do |tweet| %>
      <li class="petlist">
-     <%= link_to root_path do %>
+     <%= link_to tweet_path(tweet.id) do %>
       <div class="pet-image-content">
       <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image"%>
       </div>
