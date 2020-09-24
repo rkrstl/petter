@@ -1,4 +1,16 @@
 <%= render "shared/header" %>
 
 
-<%= @user.nickname%>
+<%= @user.nickname%>さんのマイページ
+
+<div>
+<%=link_to 'ユーザー情報の編集','/'%>
+</div>
+
+<div>
+<%=link_to 'いいねした投稿','/'%>
+</div>
+
+<div>
+<%=link_to'フォロー'%>
+<%=link_to'フォロワー'%>
