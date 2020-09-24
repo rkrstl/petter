@@ -6,17 +6,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-     user=User.find(params[:id])
-     @image=user.image
+    
+     @user=User.find(params[:id])
+    #  @image=user.image
   end
 
     def update
       @user = User.find(params[:id])
       if @user.update(user_params)
-        redirect_to user_path(current_user)
+        redirect_to root_path
 
       else
-        render :edit
+        render 'edit'
       end
     end
 

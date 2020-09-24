@@ -1,1 +1,28 @@
 <%= render "shared/header" %>
+
+<%= form_with  model:@user,local: true do |user|%>
+
+
+ <div class='form-text-wrap'>
+      <label class="form-text">ニックネーム</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= user.text_field :nickname, class:"input-default", id:"nickname", placeholder:"ワンコニャンコ", maxlength:"10" %>
+  </div>
+
+
+<%=user.text_area :introduction %>
+
+
+
+
+<div class='form-text-wrap'>
+      <label class="form-text">メールアドレス</label>
+    </div>
+    <%= user.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+
+  <%= user.file_field :image %>
+  <%= user.submit "編集" ,class:"register-red-btn" %>
+<%end%>
