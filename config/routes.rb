@@ -6,5 +6,11 @@ Rails.application.routes.draw do
   member do
     get 'mypage'
   end
+  member do
+    get 'detail'
+  end
+  member do
+    get 'lists'
+  end
  end
 end

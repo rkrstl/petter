@@ -28,8 +28,11 @@
 <%=link_to'フォロー'%>
 <%=link_to'フォロワー'%>
 
-
-<%=image_tag @user.image, class:"icon" %>
+ <% if @image.present?%>
+  <%=image_tag @image, class:"icon" %>
+  <%else%>
+  no images
+<%end%>
 
 
 <%else%>

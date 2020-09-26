@@ -6,4 +6,4 @@
 <%=@tweet.title%>
 
 
-<li><%= link_to @tweet.user.nickname, root_path, class: "user-nickname" %></li>
+<li><%= link_to @tweet.user.nickname, detail_user_path, class: "user-nickname" %></li>
