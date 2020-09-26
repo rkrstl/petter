@@ -3,7 +3,7 @@
 <%if user_signed_in? && current_user.id  %>
 
 <%= @user.nickname%>さんのマイページ
-
+<%=link_to 'みんなからみたあなたのページ',detail_user_path(@user)%>
 <div>
  <%= @user.introduction %>
  </div>
@@ -14,7 +14,6 @@
 
 <div>
 <%=link_to 'いいねした投稿','/'%>
-
 </div>
 
 <div>
@@ -28,8 +27,11 @@
 <%=link_to'フォロー'%>
 <%=link_to'フォロワー'%>
 
-
-<%=image_tag @user.image, class:"icon" %>
+ <% if @image.present?%>
+  <%=image_tag @image, class:"icon" %>
+  <%else%>
+  no images　<%=image_tag 'default.jpg',size: '100x100' %>
+<%end%>
 
 
 <%else%>

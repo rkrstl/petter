@@ -1,0 +1,20 @@
+
+<div><%= @user.nickname%>さんのページ</div>
+
+<div>自己紹介</div>
+<%=@user.introduction%>
+</div>
+
+<% @user.tweets.each do |tweet |%>
+     <%= link_to tweet_path(tweet.id) do %>
+      <div class="pet-image-content">
+      <%= image_tag tweet.image.variant(resize: "100x100"), class:"pet-image"%>
+      </div>
+
+    <div class="tweet-info">
+        <h3 class="tweet-title">
+          <%= tweet.title%>
+        </h3>
+    </div>
+  <%end%>
+  <%end%>

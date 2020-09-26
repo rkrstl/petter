@@ -3,11 +3,13 @@ class UsersController < ApplicationController
 
   def show
     @user=User.find(params[:id])
+    @image=@user.image
   end
 
   def edit
     
      @user=User.find(params[:id])
+    
  
   end
 
@@ -25,7 +27,14 @@ class UsersController < ApplicationController
     def mypage
       @user = User.find(params[:id])
     end
-  
+   
+    def detail
+      @user = User.find(params[:id])
+    end
+
+    def lists
+      @users=User.all
+    end
 
   private
   def user_params

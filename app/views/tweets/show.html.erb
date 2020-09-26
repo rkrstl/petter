@@ -4,6 +4,6 @@
 
 <%=image_tag @tweet.image.variant(resize: "500x500")%>
 <%=@tweet.title%>
+<%=@tweet.text%>
 
-
-<li><%= link_to @tweet.user.nickname, root_path, class: "user-nickname" %></li>
+<li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%></li> 
