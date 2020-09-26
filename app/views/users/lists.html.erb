@@ -3,11 +3,10 @@
 <% @users.each do |user|%>
 
 <div>
-
-<%= user.nickname%>
+<%=link_to user.nickname,detail_user_path(user)%>
 </div>
 
-<div>
+
 
 
 <%end%>
