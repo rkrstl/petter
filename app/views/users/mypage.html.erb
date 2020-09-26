@@ -1,0 +1,21 @@
+<%= render "shared/header" %>
+
+<%= @user.nickname%> 様のマイページ
+
+
+
+<li class="petlist">
+<% current_user.tweets.each do |tweet |%>
+     <%= link_to tweet_path(tweet.id) do %>
+      <div class="pet-image-content">
+      <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image"%>
+      </div>
+
+    <div class="tweet-info">
+        <h3 class="tweet-title">
+          <%= tweet.title%>
+        </h3>
+    </div>
+
+    <%end%>
+  <%end%>
