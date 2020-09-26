@@ -30,7 +30,7 @@
  <% if @image.present?%>
   <%=image_tag @image, class:"icon" %>
   <%else%>
-  no images
+  no images　<%=image_tag 'default.jpg',size: '100x100' %>
 <%end%>
 
 
