@@ -1,7 +1,12 @@
 <%= render "shared/header" %>
 
+<%if user_signed_in? && current_user.id  %>
 
 <%= @user.nickname%>さんのマイページ
+
+<div>
+ <%= @user.introduction %>
+ </div>
 
 <div>
 <%=link_to 'ユーザー情報の編集',edit_user_path %>
@@ -9,8 +14,24 @@
 
 <div>
 <%=link_to 'いいねした投稿','/'%>
+
 </div>
+
+<div>
+<%=link_to '投稿したtweet','/'%>
+
+
 
 <div>
 <%=link_to'フォロー'%>
 <%=link_to'フォロワー'%>
+
+<%=image_tag @user.image, class:"icon" %>
+
+
+<%else%>
+
+新規登録してください
+
+
+<% end %>

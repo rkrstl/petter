@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def edit
     
      @user=User.find(params[:id])
-    #  @image=user.image
+ 
   end
 
     def update
