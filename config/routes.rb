@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   member do
     get 'detail'
   end
-  member do
+  collection do
     get 'lists'
   end
  end

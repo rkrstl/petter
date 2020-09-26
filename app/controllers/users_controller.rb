@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     end
 
     def lists
-      
+      @users=User.all
     end
 
   private
