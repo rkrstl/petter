@@ -18,7 +18,6 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @user=
     @tweet=Tweet.find(params[:id])
   end
 
