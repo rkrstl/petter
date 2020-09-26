@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+  <% if tweet.like_user(current_user.id) %>
+    <%= link_to tweet_like_path(tweet.likes,tweet_id: tweet.id), method: :delete,  remote: true do %>
+      <div>asd</div>
+      <span>
+        <%= tweet.likes_count %>
+      </span>
+    <% end %>
+  <% else %>
+    <%= link_to tweet_likes_path(tweet.id), method: :post ,remote: true do %>
+      <div>❤︎</div>
+      <span>
+        <%= tweet.likes_count %>
+      </span>
+    <% end %>
+  <% end %>
+
+
+<% else %>
+
+    <span>
+      <%= tweet.like_count %>
+    </span>
+<% end %>

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
+
  root to: "tweets#index" 
- resources :tweets
+
+ resources :tweets do
+   resources :likes,only: [:create, :destroy]
+ end
+
  resources :users do
   member do
     get 'mypage'
@@ -13,4 +18,5 @@ Rails.application.routes.draw do
     get 'lists'
   end
  end
+
 end
