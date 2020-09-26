@@ -46,17 +46,27 @@ menu ul{
 }
 
 
+menu2 ul{
+  margin: 0;
+  padding: 0;
+ 
+}
 
 .menu2 li a{
   display: block;
   padding: 10px;
   color: black;
   font-size: 15px;
-  
 }
 
-.menu2{
+
+.menu2 li{
   float: left;
+  width: auto;
+}
+
+.menu2 li:hover{
+  background-color: gray;
 }
 
 
@@ -151,3 +161,8 @@ menu ul{
 }
 
 
+.icon{
+  border-radius: 50%;
+  width:  180px;
+  height: 180px;
+}
