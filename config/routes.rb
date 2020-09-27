@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
  resources :tweets do
    resources :likes,only: [:create, :destroy]
-   resources :comments,only:[:create]
+   resources :comments,only: [:create]
    collection do
    get 'lank'
    end

@@ -19,14 +19,15 @@ class TweetsController < ApplicationController
 
   def show
     @tweet=Tweet.find(params[:id])
-    comment= Comment.new
-    @comments = @tweet.comments.includes(:user)
+    @comments = Comment.all
+    @comment=Comment.new 
     
+
   end
 
 
  def lank
-  @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
+   @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
  end
 
 
