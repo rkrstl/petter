@@ -1,4 +1,12 @@
 
+/* これがなかったら大きな空白ができる */
+.wrap {
+  overflow: hidden;
+}
+
+
+
+
 a {
   text-decoration: none;
 }
