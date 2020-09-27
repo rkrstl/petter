@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
  resources :tweets do
    resources :likes,only: [:create, :destroy]
+   collection do
+   get 'lank'
+   end
  end
 
  resources :users do

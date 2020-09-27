@@ -21,10 +21,16 @@ class TweetsController < ApplicationController
     @tweet=Tweet.find(params[:id])
   end
 
-private
-def tweet_params
-  params.require(:tweet).permit(:title,:text,:image).merge(user_id: current_user.id)
-end
+
+ def lank
+  @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
+ end
+
+
+  private
+  def tweet_params
+    params.require(:tweet).permit(:title,:text,:image).merge(user_id: current_user.id)
+  end
 
 
 end
