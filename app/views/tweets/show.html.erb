@@ -11,3 +11,15 @@
 <%= render partial: 'likes/like',locals: { tweet: @tweet }%>
 </div>
 <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%></li> 
+
+
+<%= form_with model:@comment do |f|%>
+<%= f.text_field :text %>
+<%= f.submit '送信' %>
+<%end%>
+
+<div id='comments'>
+    <% @comments.reverse_each do |c| %>
+    <p><%= c.text %></p>
+    <%end%>
+  </div>
