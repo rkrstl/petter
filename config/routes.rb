@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   collection do
     get 'lists'
   end
+  member do 
+    get 'likes'
+  end
+
  end
 
 end

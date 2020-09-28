@@ -1,0 +1,14 @@
+<%= render "shared/header" %>
+
+
+<%=@user.nickname%>さんがいいねした一覧
+
+
+<%@likes.each do |like|%>
+
+<% tweet = Tweet.find_by(id: like.tweet_id) %>
+     <%= link_to tweet_path(tweet.id) do %>   
+    <%=tweet.title%>
+
+    <%end%>
+<%end%>

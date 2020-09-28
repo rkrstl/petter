@@ -32,6 +32,11 @@ class UsersController < ApplicationController
       @users=User.all
     end
 
+    def likes
+      @user=User.find_by(id:params[:id])
+      @likes=Like.where(user_id: @user.id)
+    end
+
   private
   def user_params
     params.require(:user).permit(:nickname,:email,:image,:introduction)
