@@ -8,7 +8,9 @@
 <% @user.tweets.each do |tweet |%>
      <%= link_to tweet_path(tweet.id) do %>
       <div class="pet-image-content">
-      <%= image_tag tweet.image.variant(resize: "100x100"), class:"pet-image"%>
+       <%if tweet.image.attached?%>
+      <%= image_tag tweet.image.variant(resize: "300x300")%>
+      <%end%>
       </div>
 
     <div class="tweet-info">
