@@ -1,8 +1,9 @@
 <%= render "shared/header" %>
 
 
-
-<%=image_tag @tweet.image.variant(resize: "500x500")%>
+<% if @tweet.image.attached? %>
+<%=image_tag @tweet.image.variant(resize: "300x300")%>
+<%end%>
 <%=@tweet.title%>
 <%=@tweet.text%>
 

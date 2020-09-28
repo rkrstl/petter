@@ -8,4 +8,8 @@ has_one_attached :image
 has_many :tweets
 has_many :likes
 has_many :comments
+
+
+
+
 end
