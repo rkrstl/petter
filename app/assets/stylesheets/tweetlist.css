@@ -1,6 +1,6 @@
 
 .lists-title{
-  background-color: whitesmoke;
+  background-color:gainsboro;
   text-align: center;
   padding: 10px;
   color: dimgray;
@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 30px;
-  background-color: whitesmoke;
+  background-color: rosybrown;
 }
 
 .tweet-lists>.petlist {
