@@ -1,3 +1,15 @@
+body{
+  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  height: 100vh;
+  
+}
+a{
+  color: black;
+}
+
+input::-ms-input-placeholder{
+  color:orange;
+}
 
 
 
@@ -6,4 +18,63 @@
   width:  130px;
   height: 130px;
   box-shadow: 0 2px 6px #c1ced7;
+}
+
+
+
+.all-mypage{
+  height: 400px;
+  width: 800px;
+  
+}
+
+.user-nickname{
+  margin: 50px;
+}
+.user-profile{
+  float: right;
+  height: 300px;
+  
+  width: 400px;
+  margin: 40px;
+}
+
+.mypage-contents{
+  
+  float: left;
+   position: absolute;
+  padding: 40px;
+  text-align: center; 
+ 
+} 
+
+.u-ex{
+
+}
+
+.u{
+  background-color:rgba(73, 69, 73, 0.2);
+  padding: 8px;
+  margin: 10px;
+}  
+
+.u:hover{
+  background-color:gray;
+}
+
+.user-nickname{
+  color: rgb(109, 105, 105);
+  margin: 20px;
+  padding: 10px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
+.icon{
+  border-radius: 50%;
+  width:  180px;
+  height: 180px;
 }

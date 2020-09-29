@@ -1,11 +1,13 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+     
 
 .top-wrapper{
   padding: 150px;
-  height: 500px;
-  background-image: image-url('pet.png');
+  height: 600px;
+  background-image: image-url('cat.jpg');
   background-size: cover;
+  background-color:rgba(73, 69, 69, 0.6);
+  background-blend-mode:lighten;
   }

@@ -1,0 +1,53 @@
+
+.lists-title{
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 10px;
+  color: dimgray;
+  font-size: 20px;
+}
+
+
+
+.tweet-lists{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  background-color: whitesmoke;
+}
+
+.tweet-lists>.petlist {
+  
+  width: 40vh;
+  padding: 1vw;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+
+
+
+
+.petlist{
+  height: 300px;
+  width: 100px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px gray;
+ 
+}
+
+.pet-image-content img{
+  border-radius: 10%;
+  margin-left: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.tweet-info{
+ background-color: rgb(238, 238, 238);
+ width: 300px;
+ text-align: center;
+ margin: 10px;
+}

@@ -31,7 +31,7 @@
   <div class="tweet2">
 
       <div class="title">
-      我が家の愛犬を共有しよう
+      あなたのペットを投稿してみんなに共有しよう
       </div>
 
       <p class="listings">
@@ -44,34 +44,31 @@
 
   </div>
 
-  <div class="tweet3">
-  
-  </div>
 
 </div>
 
-  <div class="pet">
-　　<% @tweets.each do |tweet| %>
-     <li class="petlist">
+  <div class="pets">
+  <div class="lists-title">みんなの投稿</div>
+  <div class="tweet-lists">
+  　　<% @tweets.each do |tweet| %>
+
+     <li class="petlist"> 
      <%= link_to tweet_path(tweet.id) do %>
-      <div class="pet-image-content">
+     <div class="pet-image-content">
       <%if tweet.image.attached?%>
       <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image" %>
       <%end%>
-      </div>
+    </div>
 
     <div class="tweet-info">
         <h3 class="tweet-title">
           <%= tweet.title%>
         </h3>
     </div>
+    </li>
     <%end%>
     <%end%>
+
   </div>
 
 
-
-<div class="box5">
-
-
-</div>

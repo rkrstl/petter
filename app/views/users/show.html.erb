@@ -2,36 +2,63 @@
 
 <%if user_signed_in? && current_user.id  %>
 
-<%= @user.nickname%>さんのマイページ
-<%=link_to 'みんなからみたあなたのページ',detail_user_path(@user)%>
-<div>
- <%= @user.introduction %>
- </div>
 
-<div>
-<%=link_to 'ユーザー情報の編集',edit_user_path %>
+
+  <div class="user-nickname ">
+  
+    <%= @user.nickname%>さんのマイページ
+  </div>
+
+<div class="all-mypage">
+<div class="user-profile">
+  <div class="user-icon u">
+  <div class="u-ex">あなたのプロフィール画像</div>
+  <%= link_to edit_user_path(current_user) do %>
+   <% if @image.present?%>
+    <%=image_tag @image, class:"icon" %>
+    <%else%>
+    no images　<%=image_tag 'default.jpg',size: '100x100' %>
+    <%end%>
+    <div class="u-ex">自己紹介</div>
+    <%= @user.introduction %>
+    <%end%>
+  </div>
 </div>
 
-<div>
-<%=link_to 'いいねした投稿',likes_user_path%>
+<%# 
+  <div class="user-introduction u">
+  　<div class="u-ex">自己紹介</div>
+    <%= @user.introduction %>
+ 
+<div class="mypage-contents ">
+
+
+  <div class="user-edit u">
+    <%=link_to 'ユーザー情報の編集',edit_user_path %>
+  </div>
+
+  <div class="user-like u">
+    <%=link_to 'いいねした投稿',likes_user_path%>
+  </div>
+
+   <div class="user-tweet u">
+    <%=link_to '投稿したtweet',mypage_user_path %>
+  </div>
+
+  <div class="user-follow u">
+    <%=link_to'フォロー'%>
+    <%=link_to'フォロワー'%>
+  </div>
+
+  <div class="user-allsee u">
+    <%=link_to 'みんなからみたあなたのページ',detail_user_path(@user)%>
+  </div>
+
 </div>
 
-<div>
+</div>
 
 
-<%=link_to '投稿したtweet',mypage_user_path %>
-
-
-
-<div>
-<%=link_to'フォロー'%>
-<%=link_to'フォロワー'%>
-
- <% if @image.present?%>
-  <%=image_tag @image, class:"icon" %>
-  <%else%>
-  no images　<%=image_tag 'default.jpg',size: '100x100' %>
-<%end%>
 
 
 <%else%>
