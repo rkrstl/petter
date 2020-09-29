@@ -1,29 +1,58 @@
 <%= render "shared/header" %>
 
+<div class="show-contents">
+<div class="t-show-contents">
 
-<% if @tweet.image.attached? %>
-<%=image_tag @tweet.image.variant(resize: "300x300")%>
-<%end%>
-<%=@tweet.title%>
-<%=@tweet.text%>
+  <div class="show-content-left">
+      <div class="t-show-nickname">
+      <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%>さんの投稿</li> 
+      </div>
+
+      <div class="t-show-image ts">
+        <% if @tweet.image.attached? %>
+        <%=image_tag @tweet.image.variant(resize: "400x400")%>
+        <%end%>
+      </div>
+
+       <div class="t-show-title ts">
+    　 title : <%=@tweet.title%>
+    </div>
+
+    <div class="t-show-text ts">
+    　 
+     <div class="t-show-real-text"><%=@tweet.text%></div>
+    </div>
+
+    </div>
 
 
-<div id="like-<%= @tweet.id %>">
-<%= render partial: 'likes/like',locals: { tweet: @tweet }%>
+ <div class="show-contents-right">
+   
+   <div class="show-warn">
+   ※ 相手のことを考え丁寧なコメントを心がけましょう。
+不快な言葉遣いなどは利用制限や退会処分となることがあります。
+  </div>
+
+    <div id="like-<%= @tweet.id %>", class="t-show-likes">
+    　<%= render partial: 'likes/like',locals: { tweet: @tweet }%>
+    </div>
+
+    <div class="t-show-comments ts">
+      <%= form_with(model: [@tweet, @comment]) do |f| %>
+        <%= f.text_field :text ,class:"show-ph ts"%>
+      <div>  <%= f.submit '送信' ,class:"submit ts"%></div>
+      <%end%>
+    </div>
+
+
+    <div id='comments',class="comments-list ts">
+      <% @comments.reverse_each do |c| %>
+        <p class="ts"><%=link_to @tweet.user.nickname,detail_user_path(@tweet.user)%>:<%= c.text %></p>
+      <%end%> 
+   </div>
+  </div>
+
+
 </div>
-<li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%></li> 
-
-
-
-<%= form_with(model: [@tweet, @comment]) do |f| %>
-  <%= f.text_field :text %>
-  <%= f.submit '送信' %>
-<%end%>
-
-
-<div id='comments'>
-    <% @comments.reverse_each do |c| %>
-       <p><%= c.text %></p>
-    <%end%> 
 
 </div>

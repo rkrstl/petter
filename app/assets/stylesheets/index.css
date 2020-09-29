@@ -128,35 +128,46 @@ menu2 ul{
 }
 
 .title{
-  
-  color: white;
   padding: 15px;
   margin: 30px;
 }
 
-.listings{
-  color: rgba(30, 22, 54, 0.6);
+.listings {
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px;
   background-color: #FFF5EE; /* 背景色 */
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
   margin: 10px auto;  
-  opacity: 0.7;
 }
 
 .listings:hover{
-  opacity: 1;
+  background-color: silver;
+}
+
+.listings a{
+  color: dimgray;
 }
 
 
+
 .search{
+
   padding: 20px;
   margin: 0 auto;
   width: 300px;
   background-color: #FFF5EE; /* 背景色 */
   box-shadow: 0 0 5px 1px #ccc; /* 影 */
   
+}
+
+.search:hover{
+  background-color: silver;
+}
+
+
+.search a{
+ color: dimgray;
 }
 
 
