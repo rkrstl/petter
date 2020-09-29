@@ -46,8 +46,8 @@
 }
 
 .tweet-info{
- background-color: rgb(238, 238, 238);
- width: 300px;
+ /* background-color: rgb(238, 238, 238); */
+ width: 250px;
  text-align: center;
  margin: 10px;
 }
