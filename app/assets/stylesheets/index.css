@@ -1,4 +1,6 @@
-
+li {
+  list-style: none;
+}
 /* これがなかったら大きな空白ができる */
 .wrap {
   overflow: hidden;
@@ -7,12 +9,13 @@
 
 
 
-a {
+ a{
   text-decoration: none;
 }
 
 .site a{
-  color: darksalmon;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: whitesmoke;
 }
 
 .site{
@@ -23,11 +26,15 @@ a {
 /* ナビゲーション */
 
 .box2{
-  background-color:gainsboro;
+  background-color: rgba(255, 255, 255, 0.2);
   width: auto;
   height: 43px;
   list-style: none;
 
+
+}
+.box2 a{
+ 
 }
 
 menu ul{
@@ -39,7 +46,7 @@ menu ul{
 .menu li a{
   display: block;
   padding: 10px;
-  color: black;
+  color:white;
   font-size: 15px;
 }
 
@@ -63,7 +70,7 @@ menu2 ul{
 .menu2 li a{
   display: block;
   padding: 10px;
-  color: black;
+  color:white;
   font-size: 15px;
 }
 
@@ -96,23 +103,23 @@ menu2 ul{
   padding: 0 15px;
   margin: 0 auto;
   
-  /* background-color:wheat; */
+  
 }
 
 
 
 .tweet1{
-  float: left;
+  /* float: left;
   width: 15%;
-  /* background-color: blueviolet; */
-  height: 100px;
+  background-color: blueviolet;
+  height: 100px; */
 
 }
 
 .tweet2{
-  
-  float: left;
-  width: 70%;
+  /* margin-left: 5%; */
+  /* float: left; */
+  /* width: 70%; */
   height:350px;
   text-align: center;
   
@@ -121,29 +128,31 @@ menu2 ul{
 }
 
 .title{
-  
-  color: darkgray;
   padding: 15px;
   margin: 30px;
 }
 
-.listings{
-  color: rgba(30, 22, 54, 0.6);
+.listings {
   box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px;
   background-color: #FFF5EE; /* 背景色 */
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
   margin: 10px auto;  
-  opacity: 0.7;
 }
 
 .listings:hover{
-  opacity: 1;
+  background-color: silver;
+}
+
+.listings a{
+  color: dimgray;
 }
 
 
+
 .search{
+
   padding: 20px;
   margin: 0 auto;
   width: 300px;
@@ -152,30 +161,26 @@ menu2 ul{
   
 }
 
+.search:hover{
+  background-color: silver;
+}
+
+
+.search a{
+ color: dimgray;
+}
+
 
 
 
 .tweet3{
-  height: 300px;
+  
   float: left;
   width: 15%;
-  /* background-color: cornflowerblue; */
-}
-
-.pet{
-  height: 300px;
-  width: 100%;
-  background-color:whitesmoke;
 }
 
 
-.icon{
-  border-radius: 50%;
-  width:  180px;
-  height: 180px;
-}
 
 
-.box5{
-  height: 1000px;
-}
+
+

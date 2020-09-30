@@ -9,9 +9,9 @@
 
 <div class="top-wrapper">
 <div class="container">
-      　</h1>petterとは...?</h1>
-        <p>愛犬を共有するサイトです</p>
-        <p>自慢の愛犬を投稿して共有してみましょう</p>
+      　</p>About petter</p>
+        <p>ペットを投稿で共有するサイトです</p>
+        <p>自慢のペットを投稿して共有しましょう</p>
         <p></p>
     </div>
 
@@ -31,7 +31,7 @@
   <div class="tweet2">
 
       <div class="title">
-      我が家の愛犬を共有しよう
+      あなたのペットを投稿してみんなに共有しよう
       </div>
 
       <p class="listings">
@@ -44,34 +44,35 @@
 
   </div>
 
-  <div class="tweet3">
-  
-  </div>
 
 </div>
 
-  <div class="pet">
-　　<% @tweets.each do |tweet| %>
-     <li class="petlist">
-     <%= link_to tweet_path(tweet.id) do %>
+  <div class="pets">
+
+  <div class="lists-title">みんなの投稿</div>
+  <div class="tweet-lists">
+    <% @tweets.each do |tweet| %>
+
+     <li class="petlist"> 
+      <%= link_to tweet_path(tweet.id) do %>
       <div class="pet-image-content">
-      <%if tweet.image.attached?%>
-      <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image" %>
-      <%end%>
+        <%if tweet.image.attached?%>
+        <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image" %>
+        <%end%>
       </div>
+      
 
-    <div class="tweet-info">
-        <h3 class="tweet-title">
-          <%= tweet.title%>
-        </h3>
+      <div class="tweet-info">
+          <h3 class="tweet-title">
+            <%= tweet.title%>
+            <div>by <%=tweet.user.nickname%>さん</div>
+          </h3>
+      </div>
+    </li>
+    <%end%>
+    <%end%>
     </div>
-    <%end%>
-    <%end%>
+
   </div>
 
 
-
-<div class="box5">
-
-
-</div>

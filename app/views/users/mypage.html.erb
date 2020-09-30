@@ -1,21 +1,35 @@
 <%= render "shared/header" %>
 
-<%= @user.nickname%> 様のマイページ
+
+<div class="likes-currentuser-nickname">
+<%=@user.nickname%>さんのマイページ
+<div class="return">
+<%= link_to 'もどる',edit_user_path(current_user) %>
+</div>
+</div>
 
 
 
-<li class="petlist">
-<% current_user.tweets.each do |tweet |%>
+<div class="like-all">
+  <% current_user.tweets.each do |tweet |%>
+   <div class="likes-tweets">
      <%= link_to tweet_path(tweet.id) do %>
-      <div class="pet-image-content">
-      <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image"%>
-      </div>
-
-    <div class="tweet-info">
-        <h3 class="tweet-title">
+     
+        <div class="likes-title">
           <%= tweet.title%>
-        </h3>
-    </div>
+        </div>
+   
+      
+      <%if tweet.image.attached?%>
+      <div class="likes-image"><%= image_tag tweet.image.variant(resize: "200x200")%></div>
+      <%end%>
 
+     <div class="likes-nickname">By <%=tweet.user.nickname%></div>
+      
+     <%end%>
+   </div> 
     <%end%>
-  <%end%>
+  </div>
+
+</div>
+

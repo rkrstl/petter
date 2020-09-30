@@ -1,3 +1,14 @@
+body{
+  /* background: linear-gradient(-135deg, #E4A972, #9941D8); */
+  background-color:#bc8f8f;
+
+  height: 100%;
+  
+}
+
+a{
+  color: white;
+}
 
 
 
@@ -6,4 +17,74 @@
   width:  130px;
   height: 130px;
   box-shadow: 0 2px 6px #c1ced7;
+}
+
+
+
+.all-mypage{
+  height: 100vh;
+  width: 800px;
+  
+}
+
+.user-nickname{
+  margin: 20px;
+}
+.user-profile{
+  float: right;
+  height: 300px;
+  
+  width: 400px;
+  margin: 20px;
+}
+
+.mypage-contents{
+  
+  float: left;
+   position: absolute;
+  padding: 10px;
+  text-align: center; 
+ 
+} 
+
+.u-ex{
+  text-align: center;
+  padding: 5px;
+  height: 40px;
+  color:white;
+  background-color:rgba(73, 69, 73, 0.2);
+
+}
+
+.user-intro{
+  margin: 30px;
+  text-align: center;
+}
+
+.u{
+  background-color:rgba(73, 69, 73, 0.2);
+  padding: 8px;
+  margin: 10px;
+}  
+
+.u:hover{
+  background-color:gray;
+}
+
+.user-nickname{
+  color: rgb(109, 105, 105);
+  margin: 10px;
+  padding: 10px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+
+.icon{
+  border-radius: 50%;
+  width:  180px;
+  height: 180px;
+  margin: 10px 10px 10px 90px;
 }

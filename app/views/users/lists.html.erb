@@ -1,12 +1,24 @@
 <%= render "shared/header" %>
 
-<% @users.each do |user|%>
 
-<div>
-<%=link_to user.nickname,detail_user_path(user)%>
+<div class="lists-all">
+<div class="lists-user">
+  <% @users.each do |user|%>
+    <div class="lists-user-individual">
+      user name : <%=link_to user.nickname,detail_user_path(user)%>
+      <% if user.image.attached? %>
+        <%=image_tag user.image, class:"lists-icon"%>
+      <%end%>
+     <div> pet name : 
+     <%=user.pet_name%>
+     </div>
+
+     <div>bleed :</div>
+     
+
+    </div>
+    <%end%>
+
 </div>
 
-
-
-
-<%end%>
+</div>

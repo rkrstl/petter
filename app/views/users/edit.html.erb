@@ -1,23 +1,41 @@
 <%= render "shared/header" %>
 
+<div class="edit-all">
+<div class="edit-contents">
 <%= form_with  model:@user,local:true do |user|%>
 
 
- <div class='form-text-wrap'>
+ <div class='edit-text-wrap e'>
       <label class="form-text">ニックネーム</label>
-      <span class="indispensable">必須</span>
-    <%= user.text_field :nickname, class:"input-default", id:"nickname", placeholder:"ワンコニャンコ", maxlength:"10" %>
+      <%# <span class="indispensable">必須</span> %>
+    <%= user.text_field :nickname, class:"input-default pl", id:"nickname", placeholder:"ワンコニャンコ", maxlength:"30" %>
   </div>
 
+  <div class="edit-pet-name e">
+  <label>ペットのおなまえ</label>
+  <%= user.text_field :pet_name,class:"input-default pl", placeholder:"ハムちゃん", maxlength:"30"%>
+ </div>
 
-<%=user.text_area :introduction %>
+<div class="edit-introduction e">
+<label class="form-intro">自己紹介</label>
+<%=user.text_area :introduction ,class:"pl"%>
+</div>
 
-<div class='form-text-wrap'>
+<div class='edit-text-wrap e'>
       <label class="form-text">メールアドレス</label>
-    <%= user.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+    
+    <%= user.email_field :email, class:"input-default pl", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
   
-  <%= user.file_field :image %>
-  <%= user.submit "編集" ,class:"register-red-btn" %>
+  <div class="edit-image">
+   <%= user.file_field :image, class:"pl e" %>
+  </div>
+  <div id="image-list"></div>
 
+  <div class="edit-submit e">
+  <%= user.submit "編集" ,class:"submit" %>
+  </div>
 <%end%>
+
+</div>
+</div>

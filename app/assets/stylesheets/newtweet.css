@@ -1,0 +1,44 @@
+
+.tweets-content{
+  height: 100vh;
+}
+
+.tweets{
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 480px;
+  height: 500px;
+  margin: 20px auto;
+  display: flex;
+  padding-left: 40px;
+}
+
+.tweet-title{
+  color: dimgray;
+  font-size: 20px;
+}
+
+.t{
+  margin: 20px auto;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tweet-submit{
+  width: 300px;
+  background:rgba(73, 69, 73, 0.2);
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  
+  
+}
+
+.text-ph{
+  width: 400px;
+  height: 100px;
+}
+
+.title-ph{
+  width: 200px;
+}
