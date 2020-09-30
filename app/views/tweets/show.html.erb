@@ -4,6 +4,14 @@
 <div class="t-show-contents">
 
   <div class="show-content-left">
+
+    
+    <div class="t-show-icon">
+      <% if @tweet.user.image.attached? %>
+      <%=image_tag @tweet.user.image, class:"t-show-icon"%>
+      <%end%>
+    </div>
+
       <div class="t-show-nickname">
       <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%>さんの投稿</li> 
       </div>
@@ -15,11 +23,11 @@
       </div>
 
        <div class="t-show-title ts">
-    　 title : <%=@tweet.title%>
+      title : <%=@tweet.title%>
     </div>
 
     <div class="t-show-text ts">
-    　 
+    
      <div class="t-show-real-text"><%=@tweet.text%></div>
     </div>
 
@@ -30,7 +38,7 @@
    
    <div class="show-warn">
    ※ 相手のことを考え丁寧なコメントを心がけましょう。
-　　不快な言葉遣いなどは利用制限や退会処分となることがあります。
+   不快な言葉遣いなどは利用制限や退会処分となることがあります。
   </div>
 
     <div id="like-<%= @tweet.id %>", class="t-show-likes">

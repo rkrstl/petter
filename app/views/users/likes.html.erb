@@ -4,7 +4,12 @@
 
 <div class="likes-currentuser-nickname">
 <%=@user.nickname%>さんがいいねした一覧
+<div class="return">
+<%= link_to 'もどる',edit_user_path(current_user) %>
 </div>
+</div>
+
+
 
 
 <div class="likes-all">
