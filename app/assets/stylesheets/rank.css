@@ -1,0 +1,16 @@
+
+
+.rank-tweet{
+  color: white;
+  width: 600px;
+  height: 350px;
+  background-color:rgba(73, 69, 73, 0.2);
+  text-align: center;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+.rank-num{
+  font-size: large;
+  border-bottom: solid 2px peru;
+}

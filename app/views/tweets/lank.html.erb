@@ -1,11 +1,16 @@
 <%= render "shared/header" %>
 
 
- <% @all_ranks.each.each.with_index(1) do |tweet,i|%>
-  <div>
-      第<%= i %>位 :   
-      <%=tweet.title%>
-      <%=image_tag tweet.image.variant(resize: "200x200")%>
-  </div>
+    <% @all_ranks.each.each.with_index(1) do |tweet,i|%>
+    <div class="rank-tweet">
+      <%= link_to tweet_path(tweet.id) do %>
+        <div class="rank-num">第<%= i %>位 </div>  
+        <div class="rank-title"><%=tweet.title%></div>
+        <div class="rank-image"><%=image_tag tweet.image.variant(resize: "200x200")%></div>
+        <div class="rank-nickname">By <%=tweet.user.nickname%></div>
+      <%end%>
+    </div>
 
- <%end%>
+    
+    <%end%>
+
