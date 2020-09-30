@@ -1,14 +1,33 @@
 <%= render "shared/header" %>
 
+<div class="likes">
 
+<div class="likes-currentuser-nickname">
 <%=@user.nickname%>さんがいいねした一覧
+</div>
 
 
+<div class="likes-all">
 <%@likes.each do |like|%>
+<div class="likes-tweets">
+ <% tweet = Tweet.find_by(id: like.tweet_id) %>
+   <%= link_to tweet_path(tweet.id) do %>   
 
-<% tweet = Tweet.find_by(id: like.tweet_id) %>
-     <%= link_to tweet_path(tweet.id) do %>   
-    <%=tweet.title%>
+   <div class="likes-title"><%=tweet.title%></div>
 
-    <%end%>
+   <%if tweet.image.attached?%>
+   <div class="likes-image"><%=image_tag tweet.image.variant(resize: "200x200")%></div>
+   <%end%>
+
+   <div class="likes-nickname">By <%=tweet.user.pet_name%></div>
+
+   <%end%>
+ </div>
 <%end%>
+
+</div>
+
+
+</div>
+
+

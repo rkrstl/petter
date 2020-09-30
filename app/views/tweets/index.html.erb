@@ -51,7 +51,7 @@
 
   <div class="lists-title">みんなの投稿</div>
   <div class="tweet-lists">
-  　　<% @tweets.each do |tweet| %>
+    <% @tweets.each do |tweet| %>
 
      <li class="petlist"> 
       <%= link_to tweet_path(tweet.id) do %>
@@ -60,6 +60,7 @@
         <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image" %>
         <%end%>
       </div>
+      
 
       <div class="tweet-info">
           <h3 class="tweet-title">
