@@ -53,3 +53,17 @@
 
 }
 
+.detail-petname{
+  box-shadow: 0 0 10px gray;
+
+  margin:  10px auto;
+  width: 200px;
+  background-color:rgba(73, 69, 73, 0.2);
+}
+
+.detail-text-title{
+  width: 250px;
+  margin: 20px auto;
+  color: beige;
+  border-bottom: gainsboro 1px solid;
+}

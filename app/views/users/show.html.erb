@@ -17,7 +17,7 @@
    <% if @image.present?%>
     <%=image_tag @image, class:"icon" %>
     <%else%>
-    no images <%=image_tag 'default.jpg',size: '100x100' %>
+     <%=image_tag 'default.jpg',class:"icon"%>
     <%end%>
     <div class="u-ex">自己紹介</div>
     <div class="user-intro"><%= @user.introduction%></div>

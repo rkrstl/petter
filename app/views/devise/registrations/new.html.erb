@@ -11,14 +11,14 @@
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_field :nickname, class:"input-default", id:"nickname",maxlength:"20" %>
+    <%= f.text_field :nickname, class:"input-default", id:"nickname dph",maxlength:"20" %>
   </div>
 
 
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email " %>
   </div>
 
   <div class="field">
@@ -26,7 +26,7 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password " ,class:"dph"%>
   </div>
 
   <div class="field">

@@ -11,6 +11,7 @@
 }
 
 .rank-num{
+  margin: 10px;
   font-size: large;
-  border-bottom: solid 2px peru;
+  border-bottom: solid 2px dimgray;
 }
