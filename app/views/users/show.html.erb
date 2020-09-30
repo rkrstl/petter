@@ -17,13 +17,13 @@
    <% if @image.present?%>
     <%=image_tag @image, class:"icon" %>
     <%else%>
-    no images　<%=image_tag 'default.jpg',size: '100x100' %>
+    no images <%=image_tag 'default.jpg',size: '100x100' %>
     <%end%>
     <div class="u-ex">自己紹介</div>
     <div class="user-intro"><%= @user.introduction%></div>
 
     <div class="u-ex">あなたのペットの名前</div>
-    
+    <div class="user-intro"><%=@user.pet_name%></div>
     
     <%end%>
     
