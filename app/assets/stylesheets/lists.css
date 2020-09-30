@@ -1,0 +1,30 @@
+
+
+.lists-all{
+  height: 100vh;
+}
+
+.lists-user{
+ 
+  width: 300px;
+  height: 200px;
+
+}
+
+.lists-user-individual{
+  height:200px ;
+  margin: 20px;
+  border: 1px solid dimgray;
+ 
+  padding:30px;
+  
+}
+
+.lists-icon{
+  
+
+  border-radius: 50%;
+  width:  60px;
+  height: 60px;
+  box-shadow: 0 2px 6px #c1ced7;
+}

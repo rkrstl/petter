@@ -6,7 +6,12 @@
       <%= link_to tweet_path(tweet.id) do %>
         <div class="rank-num">第<%= i %>位 </div>  
         <div class="rank-title"><%=tweet.title%></div>
-        <div class="rank-image"><%=image_tag tweet.image.variant(resize: "200x200")%></div>
+        
+        <div class="rank-image">
+        <% if tweet.image.attached?%>
+        <%=image_tag tweet.image.variant(resize: "200x200")%>
+        <%end%>
+        </div>
         <div class="rank-nickname">By <%=tweet.user.nickname%></div>
       <%end%>
     </div>

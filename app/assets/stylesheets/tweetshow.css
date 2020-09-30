@@ -1,6 +1,7 @@
 
 
 body{
+  
   color: rgb(68, 65, 65);
 }
 .show-contents{
@@ -33,6 +34,7 @@ body{
 .show-contents-right{
   float: right;
   width: 400px;
+  margin-top: 30px;
   
 }
 
