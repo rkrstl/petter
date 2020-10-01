@@ -6,6 +6,9 @@
 height: 100%;
 }
 
+.session-all{
+  height: 100vh;
+}
 
 .registrations-contents{
 
@@ -15,7 +18,7 @@ height: 100%;
   display: flex;
   }
   
-.registratins-title{
+.registrations-title{
   font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-right: 50px;
@@ -54,5 +57,13 @@ em{
 }
 
 .indispensable{
+  text-align: center;
+}
+
+.devise-link{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 50px;
+  margin-top: 40px;
   text-align: center;
 }
