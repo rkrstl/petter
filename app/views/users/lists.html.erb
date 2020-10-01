@@ -10,7 +10,7 @@
         <%else%>
         <%=image_tag 'default.jpg',class:"lists-icon"%>
       <%end%>
-      user name : <%=link_to user.nickname,detail_user_path(user)%>
+      <div>user name : <%=link_to user.nickname,detail_user_path(user)%></div>
     
      <div> pet name : 
      <%=user.pet_name%>

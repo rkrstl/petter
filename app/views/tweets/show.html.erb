@@ -9,7 +9,10 @@
     <div class="t-show-icon">
       <% if @tweet.user.image.attached? %>
       <%=image_tag @tweet.user.image, class:"t-show-icon"%>
+      <%else%>
+        <%=image_tag 'default.jpg',size: '100x100', class:"t-show-icon" %>
       <%end%>
+      
     </div>
 
       <div class="t-show-nickname">
@@ -42,7 +45,7 @@
   </div>
 
     <div id="like-<%= @tweet.id %>", class="t-show-likes">
-    　<%= render partial: 'likes/like',locals: { tweet: @tweet }%>
+     <%= render partial: 'likes/like',locals: { tweet: @tweet }%>
     </div>
 
     <div class="t-show-comments ts">
