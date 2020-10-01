@@ -1,0 +1,58 @@
+
+
+
+
+.registrations-all{
+height: 100%;
+}
+
+
+.registrations-contents{
+
+  padding: 10px;
+  width: 500px;
+  margin: 10px auto;
+  display: flex;
+  }
+  
+.registratins-title{
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-right: 50px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.field{
+  width: 400px;
+  margin: 10px;
+ flex-direction: column;
+ display: flex;
+ background-color:rgba(73, 69, 73, 0.2);
+}
+
+
+.d-ph{
+   width: auto;
+    margin: 10px;
+  flex-direction: column;
+  
+}
+
+em{
+  text-align: center;
+}
+
+
+.submit{
+  width: 100%;
+  background:rgba(73, 69, 73, 0.2);
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.indispensable{
+  text-align: center;
+}
