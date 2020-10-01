@@ -9,8 +9,14 @@ class Tweet < ApplicationRecord
   end
 
 
+# 画像
+ validates :image,presence: true
 
+#  タイトル
+validates  :title,presence: true
 
+# text
+validates :text,presence: true
   
 end
 
