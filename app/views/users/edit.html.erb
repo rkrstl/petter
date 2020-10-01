@@ -4,6 +4,7 @@
 <div class="edit-contents">
 <%= form_with  model:@user,local:true do |user|%>
 
+<%# <%= render 'shared/error_messages', model: f.object %> %>
 
  <div class='edit-text-wrap e'>
       <label class="form-text">ニックネーム</label>
@@ -26,6 +27,7 @@
     
     <%= user.email_field :email, class:"input-default pl", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
+
   
   <div class="edit-image">
    <%= user.file_field :image, class:"pl e" %>

@@ -8,6 +8,8 @@
 
   <h3 class="tweet-title t">新規投稿</h3>
 
+  <%= render 'shared/error_messages', model: f.object %>
+
    <div class="tweet-click-upload t">
         <%= f.file_field :image %>
   </div>
