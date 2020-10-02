@@ -25,6 +25,7 @@ body{
 
 }
 .t-show-title{
+  margin: 10px;
   padding: 10px;
   border: indianred solid 1px;
 

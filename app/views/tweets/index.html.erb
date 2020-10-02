@@ -9,7 +9,7 @@
 
 <div class="top-wrapper">
 <div class="container">
-      　</p>About petter</p>
+       </p>About petter</p>
         <p>ペットを投稿で共有するサイトです</p>
         <p>自慢のペットを投稿して共有しましょう</p>
         <p></p>
@@ -39,7 +39,7 @@
       </p>
 
       <p class="search">
-      　<a href="#" class="button">検索する</a>
+       <a href="#" class="button">検索する</a>
       </p>
 
   </div>
@@ -65,8 +65,9 @@
       <div class="tweet-info">
           <h3 class="tweet-title">
             <%= tweet.title%>
-            <div>by <%=tweet.user.nickname%>さん</div>
-          </h3>
+            </h3>
+            <div class="tweet-by">by <%=tweet.user.nickname%>さん</div>
+          
       </div>
     </li>
     <%end%>

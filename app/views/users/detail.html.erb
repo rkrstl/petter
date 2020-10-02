@@ -21,9 +21,13 @@
         </div>
 
         
-
+    
       <div class="detail-text-title">自己紹介</div>
+      <%if @user.introduction !=nil%>
        <div class="detail-text"><%=@user.introduction%></div>
+       <%else%>
+       まだ登録されていません。
+       <%end%>
       </div>
 
 

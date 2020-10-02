@@ -18,7 +18,7 @@
 
 <div class="edit-introduction e">
 <label class="form-intro">自己紹介</label>
-<%=user.text_area :introduction ,class:"pl"%>
+<%=user.text_area :introduction ,class:"pl", placeholder:"はじめまして。猫を飼っています。よろしくお願いします。"%>
 </div>
 
 <div class='edit-text-wrap e'>
@@ -26,6 +26,7 @@
     
     <%= user.email_field :email, class:"input-default pl", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
+
   
   <div class="edit-image">
    <%= user.file_field :image, class:"pl e" %>

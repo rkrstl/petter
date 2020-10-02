@@ -19,21 +19,30 @@
     <%else%>
      <%=image_tag 'default.jpg',class:"icon"%>
     <%end%>
-    <div class="u-ex">自己紹介</div>
-    <div class="user-intro"><%= @user.introduction%></div>
 
+    <div class="u-ex">自己紹介</div>
+
+    <%if @user.introduction != nil %>
+    <div class="user-intro"><%= @user.introduction%></div>
+    <%else%>
+    <div class="user-intro">
+     まだ登録されていません。
+     </div> 
+
+     <%end%>
+   
     <div class="u-ex">あなたのペットの名前</div>
+
+   <%if @user.pet_name.nil? %>
     <div class="user-intro"><%=@user.pet_name%></div>
-    
+    <%else%>
+    <div class="user-intro">まだ登録されていません。</div>
+    <%end%>
     <%end%>
     
   </div>
 </div>
 
-<%# 
-  <div class="user-introduction u">
-  　<div class="u-ex">自己紹介</div>
-    <%= @user.introduction %>
  
 <div class="mypage-contents ">
 

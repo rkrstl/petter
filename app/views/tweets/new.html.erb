@@ -6,14 +6,17 @@
   <%= form_with(model:@tweet,local:true) do |f| %>
 
 
-  <h3 class="tweet-title t">新規投稿</h3>
+  <h3 class="new-tweet-title t">新規投稿</h3>
+
+  <%= render 'shared/error_messages', model: f.object %>
 
    <div class="tweet-click-upload t">
-        <%= f.file_field :image %>
+        <%= f.file_field :image,id:"user_image" %>
+        <div id="image-list"></div>
   </div>
       
 
-   <div class="tweet-title t">
+   <div class="new-tweet-title t">
       <%=f.text_field :title,placeholder:"タイトル",class:"title-ph"%>
    </div>
 
