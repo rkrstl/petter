@@ -1,9 +1,9 @@
 
 .lists-title{
-  background-color:gainsboro;
+  background-color:rgba(73, 69, 73, 0.2);
   text-align: center;
   padding: 10px;
-  color: dimgray;
+  color: whitesmoke;
   font-size: 20px;
 
 }
@@ -31,25 +31,34 @@
 
 
 .petlist{
+  text-align: center;
   height: 300px;
   width: 100px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color:rgba(73, 69, 73, 0.2);
   box-shadow: 0 0 10px gray;
  
 }
 
 .pet-image-content img{
-  border-radius: 10%;
-  margin-left: 10%;
+  
   width: 200px;
   height: 200px;
 }
 
 .tweet-info{
- /* background-color: rgb(238, 238, 238); */
  width: 250px;
- text-align: center;
  margin: 10px;
- background-color: rgba(255, 255, 255, 0.2);
+ 
+}
+
+.tweet-title{
+  color: white;
+   border-bottom: gray 2px solid;
+}
+
+.tweet-by{
+  margin: 5px;
+  color: white;
+  font-size: 13px;
 }

@@ -18,6 +18,9 @@
       <div class="t-show-nickname">
       <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%>さんの投稿</li> 
       </div>
+      <div class="t-show-title ts">
+      title : <%=@tweet.title%>
+    </div>
 
       <div class="t-show-image ts">
         <% if @tweet.image.attached? %>
@@ -25,9 +28,7 @@
         <%end%>
       </div>
 
-       <div class="t-show-title ts">
-      title : <%=@tweet.title%>
-    </div>
+       
 
     <div class="t-show-text ts">
     
@@ -47,6 +48,7 @@
     <div id="like-<%= @tweet.id %>", class="t-show-likes">
      <%= render partial: 'likes/like',locals: { tweet: @tweet }%>
     </div>
+
 
     <div class="t-show-comments ts">
       <%= form_with(model: [@tweet, @comment]) do |f| %>

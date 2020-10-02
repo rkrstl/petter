@@ -39,7 +39,7 @@
       </p>
 
       <p class="search">
-      　<a href="#" class="button">検索する</a>
+       <a href="#" class="button">検索する</a>
       </p>
 
   </div>
@@ -65,8 +65,9 @@
       <div class="tweet-info">
           <h3 class="tweet-title">
             <%= tweet.title%>
-            <div>by <%=tweet.user.nickname%>さん</div>
-          </h3>
+            </h3>
+            <div class="tweet-by">by <%=tweet.user.nickname%>さん</div>
+          
       </div>
     </li>
     <%end%>
