@@ -7,7 +7,7 @@ class PetsController < ApplicationController
 
   def create
     @pet = Pet.create(pet_params)
-    if @tweet.save
+    if @pet.save
     redirect_to root_path
     else
       render :new
@@ -18,7 +18,7 @@ class PetsController < ApplicationController
   private
 
    def pet_params
-    params.require(:pet).permit(:pet_name,:bleed_id,:birth,:age,:personality).merge(user_id:current_user.id)
+    params.require(:pet).permit(:image,:pet_name,:bleed_id,:birth,:personality).merge(user_id:current_user.id)
    end
 
 

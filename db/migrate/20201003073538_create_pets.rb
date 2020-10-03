@@ -5,7 +5,6 @@ class CreatePets < ActiveRecord::Migration[6.0]
       t.string     :pet_name,null:false
       t.integer    :bleed_id,null: false
       t.date       :birth,null:false
-      t.integer    :age
       t.text       :personality 
       t.timestamps 
     end

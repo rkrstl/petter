@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2020_10_03_073538) do
     t.string "pet_name", null: false
     t.integer "bleed_id", null: false
     t.date "birth", null: false
-    t.integer "age"
     t.text "personality"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
