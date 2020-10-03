@@ -38,16 +38,17 @@
 }
 
 .detail-tweet{
+  
+  text-align: center;
   height: 300px;
   width: 100px;
-  margin: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 10px gray;
 }
 
 .detail-image img{
+  margin-top: 20px;
   border-radius: 5%;
-  margin-left: 10%;
   width: 200px;
   height: 200px;
 
@@ -56,7 +57,7 @@
 .detail-petname{
   box-shadow: 0 0 10px gray;
 
-  margin:  10px auto;
+  margin:  30px auto;
   width: 200px;
   background-color:rgba(73, 69, 73, 0.2);
 }
