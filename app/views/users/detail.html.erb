@@ -26,6 +26,13 @@
          <% end %>
          <%= render partial:'relationships/follow_button', locals:{user: @user} %>
     
+      <div class="following-count">
+         フォローしてる人<%= @follow_count %>
+       </div>
+
+       <div class="follower-count">
+       フォロワー<%= @follwer_count%>
+       </div>
       <div class="detail-text-title">自己紹介</div>
       <%if @user.introduction !=nil%>
        <div class="detail-text"><%=@user.introduction%></div>
@@ -81,7 +88,7 @@
         <%= image_tag @pet.image, class:"pet-icon"%>
         <%end%>
         </div>
-        
+
       </div>
      
   <div>
