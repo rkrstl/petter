@@ -19,8 +19,11 @@
         <div class="detail-petname">
         <%=@user.pet_name%>
         </div>
-
-        
+  
+         <% flash.each do |message_type, message| %>
+         <%= message%>
+         <% end %>
+         <%= render partial:'relationships/follow_button', locals:{user: @user} %>
     
       <div class="detail-text-title">自己紹介</div>
       <%if @user.introduction !=nil%>
@@ -29,6 +32,9 @@
        まだ登録されていません。
        <%end%>
       </div>
+
+      
+     
 
 
   </div>
