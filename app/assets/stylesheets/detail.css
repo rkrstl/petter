@@ -1,6 +1,7 @@
 
 .detail-all{
   height: 100%;
+  text-align: center;
 }
 
 .detail-left{
@@ -69,28 +70,19 @@
 
 
 .detail-pet-title{
-  margin-left: 100px;
+
   color: bisque;
 
 
 }
 .detail-pet-image img{
   border-radius: 50%;
- 
-  
-  
   width:  200px;
   height: 200px;
   
   
 }
 
-.detail-pet-all{
-  margin-bottom: 80px;
- margin-left: 200px;
-
- 
-}
 
 
 
@@ -115,3 +107,9 @@
   display: inline-block;
 }
 
+.pet-form{
+  width: 500px;
+  
+ margin: 10px auto;
+  text-align: center;
+}

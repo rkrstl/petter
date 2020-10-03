@@ -36,13 +36,15 @@
 
   </div>
 
-    <div class="detail-pet-all">
+   <div class="detail-pet-all">
+
        <div class="detail-pet-title">
         ペットの紹介
        </div>
 
 
-     <div class="pet-left ">
+      <div class="pet-left ">
+
         <div class="detail-pet p">
           <div class="pet-label">おなまえ</div>
           <%=@pet.pet_name%>
@@ -70,19 +72,19 @@
          <%=@pet.personality%>
          </div>
 
-      </div>
+     </div>
      
       <div class="pet-right ">
+
         <div class="detail-pet-image">
         <% if @pet.image.attached?%>
         <%= image_tag @pet.image, class:"pet-icon"%>
         <%end%>
         </div>
+        
       </div>
-
-   </div>
      
-
+  <div>
       
      
 
