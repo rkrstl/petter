@@ -1,5 +1,7 @@
 
-
+.detail-all{
+  height: 100%;
+}
 
 .detail-left{
   margin: 40px;
@@ -54,13 +56,6 @@
 
 }
 
-.detail-petname{
-  box-shadow: 0 0 10px gray;
-
-  margin:  30px auto;
-  width: 200px;
-  background-color:rgba(73, 69, 73, 0.2);
-}
 
 .detail-text-title{
   width: 250px;
@@ -68,3 +63,55 @@
   color: beige;
   border-bottom: gainsboro 1px solid;
 }
+
+
+/* ペットの内容 */
+
+
+.detail-pet-title{
+  margin-left: 100px;
+  color: bisque;
+
+
+}
+.detail-pet-image img{
+  border-radius: 50%;
+ 
+  
+  
+  width:  200px;
+  height: 200px;
+  
+  
+}
+
+.detail-pet-all{
+  margin-bottom: 80px;
+ margin-left: 200px;
+
+ 
+}
+
+
+
+.pet-label{
+  
+  width: 100px;
+  color:  beige;
+  display: inline-block;
+}
+.p{
+  margin: 20px;
+  border-bottom: beige 1px solid;
+  
+}
+.pet-left{
+  
+ display: inline-block;
+}
+
+.pet-right{
+
+  display: inline-block;
+}
+

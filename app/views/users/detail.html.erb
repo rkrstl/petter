@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-
+<div class="detail-all">
 
   <div class="detail-left">
 
@@ -15,13 +15,14 @@
       <%else%>
         <%=image_tag 'default.jpg',size: '100x100' %>
       <%end%>
+     
 
-        <div class="detail-petname">
-        <%=@user.pet_name%>
-        </div>
-  
-         <% flash.each do |message_type, message| %>
+
+
+    <% flash.each do |message_type, message| %>
+    <div>
          <%= message%>
+         </div>
          <% end %>
          <%= render partial:'relationships/follow_button', locals:{user: @user} %>
     
@@ -33,11 +34,60 @@
        <%end%>
       </div>
 
+  </div>
+
+    <div class="detail-pet-all">
+       <div class="detail-pet-title">
+        ペットの紹介
+       </div>
+
+
+     <div class="pet-left ">
+        <div class="detail-pet p">
+          <div class="pet-label">おなまえ</div>
+          <%=@pet.pet_name%>
+        </div>
+
+
+        <div class="detail-pet-gender p">
+        <div class="pet-label">性別</div>
+        <%= @pet.gender.name%>
+        </div>
+
+        <div class="detail-pet-bleed p">
+          <div class="pet-label">種類</div>
+          <%=@pet.bleed.name%>
+        </div>
+    
+      
+      <div class="detail-birth p">
+      <div class="pet-label">お誕生日</div>
+      <%= @pet.birth%>
+      </div>
+
+       <div class="detail-personality p">
+       <div class="pet-label">どんなこ？</div>
+         <%=@pet.personality%>
+         </div>
+
+      </div>
+     
+      <div class="pet-right ">
+        <div class="detail-pet-image">
+        <% if @pet.image.attached?%>
+        <%= image_tag @pet.image, class:"pet-icon"%>
+        <%end%>
+        </div>
+      </div>
+
+   </div>
+     
+
       
      
 
 
-  </div>
+
 
 
   <div class="detail-right">
@@ -64,3 +114,6 @@
    </div>
   
  </div>
+
+
+</div>

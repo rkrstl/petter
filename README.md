@@ -79,8 +79,7 @@ belongs_to :follow,class_name: 'User'
 |pet_name   |string    |null:false                      |
 |bleed_id   |integer   |null: false                     |
 |birth      |date      |                                |
-|gender_id  |integer   |null: false                     |
-|age        |integer   |                                |
+|gender_id  |integer   |null: false                     |     |
 |personality|text      |null: false                     |
 
 

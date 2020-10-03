@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+
+<%=link_to '編集 ',edit_pet_path(@pet.id), method: :get%>
+
+<div class="pet-info">
+あなたが登録したペット
+<div>
+
+<div class="your-pet-image">
+<%if @pet.image.attached?%>
+<%= image_tag @pet.image.variant(resize:"100x100")%>
+<%end%>
+</div>
+
+<label> おなまえ </label>
+<div>
+<%= @pet.pet_name%>
+</div>
+
+<label> 性別 </label>
+<div>
+<%= @pet.gender.name%>
+</div>
+
+<label> 種類 </label>
+<div>
+<%=@pet.bleed.name%>
+</div>
