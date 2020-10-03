@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_130213) do
+ActiveRecord::Schema.define(version: 2020_10_03_073538) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,18 @@ ActiveRecord::Schema.define(version: 2020_10_02_130213) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "pets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "pet_name", null: false
+    t.integer "bleed_id", null: false
+    t.date "birth", null: false
+    t.integer "age"
+    t.text "personality"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_pets_on_user_id"
+  end
+
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "follow_id"
@@ -65,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_130213) do
     t.string "title", null: false
     t.text "text", null: false
     t.integer "likes_count"
+    t.datetime "calendar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_tweets_on_user_id"
@@ -74,8 +87,6 @@ ActiveRecord::Schema.define(version: 2020_10_02_130213) do
     t.string "nickname", null: false
     t.date "birth", null: false
     t.text "introduction"
-    t.integer "bleed_id"
-    t.string "pet_name"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -88,6 +99,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_130213) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "pets", "users"
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
   add_foreign_key "tweets", "users"
