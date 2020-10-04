@@ -110,6 +110,33 @@
 .pet-form{
   width: 500px;
   
- margin: 10px auto;
+ margin: 60px auto;
   text-align: center;
+}
+
+
+/* フォローの部分 */
+
+.following-count{
+  padding:5px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100px;
+  display: inline-block;
+}
+
+.follower-count{
+  margin: 5px;
+  padding:5px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  
+  display: inline-block;
+}
+
+.follow-submit{
+  width: 10%;
+  background:rgba(63, 46, 63, 0.2);
+  color: #fff;
+  line-height: 35px;
+  font-size: 14px;
+  cursor: pointer;
 }

@@ -10,8 +10,10 @@
 
   <%= form_with(model: @pet,local: true) do |f| %>
 
-  <div class="pet_image">
-<%= f.file_field :image, class:"pl e" %>
+ 
+  <div class="field">
+  <label>ペットの画像</label>
+   <%= f.file_field :image %>
  </div>
 
      <div class="field">

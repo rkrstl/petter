@@ -33,9 +33,7 @@ li {
 
 
 }
-.box2 a{
- 
-}
+
 
 menu ul{
   margin: 0;
@@ -54,6 +52,8 @@ menu ul{
 .menu li{
   float: right;
   width: auto;
+  list-style: none;
+    position: relative;
 }
 
 .menu li:hover{
