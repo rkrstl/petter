@@ -1,30 +1,14 @@
-<div box1>
-  <div class="site">
-  <h1><a href="/">petter <i class="fas fa-paw"></i></a></h1>
-  </div>
-</div>
 
+<% if user_signed_in? %>
 
-  <% if user_signed_in? %>
-<div class="box2">
+<header id="header">
 
-  
-   <ul class="menu">
-      <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <li><%=link_to '投稿',new_tweet_path %></li>
-      <li><%=link_to current_user.nickname,user_path(current_user) %> 
-          <ul class="menu-child">
-                <li><a href="/">あなたのページ</a></li>
-                <li><a href="/">ユーザー情報</a></li>
-          </ul>
-       </li> 
-     
-   </ul>
-   
+  <h1>
+  <a href="/">petter <i class="fas fa-paw"></i></a>
+  </h1>
+ 
 
-    
-
-  <nav class="menu2">
+ <nav class="header-nav1">
       <ul>
         <li><a href="#">種類から探す</a></li>
         <li><%=link_to 'ランキング',lank_tweets_path%></li>
@@ -32,28 +16,42 @@
       </ul>
   </nav>
 
-  </div>
-<% else %>
-<div class="box2">
-  <ul class="lists-right">
-   <nav class="menu">
-     <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-   
+
+
+  <nav class="header-nav2">
+
+    <ul>
+      <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li><%=link_to '投稿',new_tweet_path %></li>
+      <li><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+    </ul>
    </nav>
-   
-  </ul>
+
+ </header>
+
     
 
-  <nav class="menu2">
-   
-      <ul>
-        <li><a href="#">種類から探す</a></li>
-        <li><a href="#">ランキング</a></li>
-      </ul>
-  </nav>
 
-  </div>
+
+<% else %>
+
+
+<header id="header">
+  
+  <h1>
+  <a href="/">petter <i class="fas fa-paw"></i></a>
+  </h1>
+
+
+  <nav class="header-nav2">
+
+    <ul>
+     <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+    </ul>
+   </nav>
+
+ </header>
 
 <%end%> 
 
