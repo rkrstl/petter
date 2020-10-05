@@ -141,3 +141,11 @@
   font-size: 14px;
   cursor: pointer;
 }
+
+
+.detail-user-tweets{
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  background:rgba(63, 46, 63, 0.2);
+}
