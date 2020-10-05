@@ -1,6 +1,6 @@
 <div box1>
   <div class="site">
-  <h1><a href="/">petter</a></h1>
+  <h1><a href="/">petter <i class="fas fa-paw"></i></a></h1>
   </div>
 </div>
 
@@ -12,11 +12,8 @@
    <ul class="menu">
       <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
       <li><%=link_to '投稿',new_tweet_path %></li>
-      <li> <%=link_to 'ペットを登録',new_pet_path%></li>
-      <li><%=link_to current_user.nickname,user_path(current_user) %>
-      
-      
-      </li> 
+      <li><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+     
    </ul>
    
 
@@ -37,13 +34,14 @@
    <nav class="menu">
      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-
+   
    </nav>
    
   </ul>
     
 
   <nav class="menu2">
+   
       <ul>
         <li><a href="#">種類から探す</a></li>
         <li><a href="#">ランキング</a></li>

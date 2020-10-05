@@ -11,11 +11,11 @@
         <%else%>
         <%=image_tag 'default.jpg',class:"lists-icon"%>
       <%end%>
-      <div>user name : <%=link_to pet.pet_name,detail_user_path(pet)%></div>
+      <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet)%></div>
     
       
-    <div> pet name: <%= pet.pet_name%></div>
-     <div>bleed : <%= pet.bleed.name%></div>
+    <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
+     <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
      
 
     </div>

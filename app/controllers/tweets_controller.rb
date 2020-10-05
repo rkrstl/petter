@@ -1,6 +1,9 @@
 class TweetsController < ApplicationController
+  before_action :move_to_index,except:[:index,:show, :search]
+
   def index
     @tweets=Tweet.all
+    
   end
 
   def new
@@ -33,9 +36,19 @@ class TweetsController < ApplicationController
 
 
   private
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end 
+
+
   def tweet_params
     params.require(:tweet).permit(:title,:text,:image).merge(user_id: current_user.id)
   end
 
+
+   
 
 end

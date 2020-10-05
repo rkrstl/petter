@@ -1,6 +1,7 @@
 
 
 .lists-all{
+  overflow: scroll;
   height: 100vh;
   
 }
