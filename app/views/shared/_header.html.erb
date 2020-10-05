@@ -12,7 +12,12 @@
    <ul class="menu">
       <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
       <li><%=link_to '投稿',new_tweet_path %></li>
-      <li><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+      <li><%=link_to current_user.nickname,user_path(current_user) %> 
+          <ul class="menu-child">
+                <li><a href="/">あなたのページ</a></li>
+                <li><a href="/">ユーザー情報</a></li>
+          </ul>
+       </li> 
      
    </ul>
    
@@ -23,7 +28,7 @@
       <ul>
         <li><a href="#">種類から探す</a></li>
         <li><%=link_to 'ランキング',lank_tweets_path%></li>
-        <li><%=link_to 'ペット一覧',lists_users_path %></li> 
+        <li><%=link_to 'ペット一覧',lists_users_path %></li>  
       </ul>
   </nav>
 

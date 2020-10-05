@@ -184,3 +184,16 @@ menu2 ul{
 
 
 
+
+
+.menu li li {
+
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu li:hover > ul > li {
+  height: 3rem;
+  overflow: visible;
+}
