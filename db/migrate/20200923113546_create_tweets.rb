@@ -5,6 +5,7 @@ class CreateTweets < ActiveRecord::Migration[6.0]
       t.string :title,null:false
       t.text :text,null:false
       t.integer :likes_count
+      t.datetime :calendar
 
       t.timestamps
     end

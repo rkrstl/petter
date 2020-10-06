@@ -26,6 +26,7 @@ has_one_attached :image
 has_many :tweets
 has_many :likes
 has_many :comments
+has_many :pets
 
 has_many :relationships
 has_many :followings, through: :relationships, source: :follow

@@ -35,11 +35,25 @@
       </div>
 
       <p class="listings">
-        <%= link_to '投稿する',new_tweet_path %>
+        <%= link_to '投稿する',new_tweet_path %><i class="fas fa-pen"></i>
       </p>
 
+
+    
       <p class="search">
-       <a href="#" class="button">検索する</a>
+       
+       <% if user_signed_in?%>
+       <% if current_user.pets.present?%>
+        <%=link_to 'ペットの編集',edit_pet_path(current_user)%> <i class="fas fa-edit"></i>
+        
+       <%else%>
+       <%=link_to 'ペットを登録',new_pet_path%>
+       <%end%>
+
+       <%else%>
+        <%=link_to 'ペットを登録',new_user_session_path%>
+       <%end%>
+
       </p>
 
   </div>

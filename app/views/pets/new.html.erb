@@ -1,0 +1,74 @@
+<%= render "shared/header" %>
+
+
+<div class="pet-all">
+
+
+
+<div class="pet-form">
+
+
+  <%= form_with(model: @pet,local: true) do |f| %>
+
+ 
+  <div class="field">
+  <label>ペットの画像</label>
+   <%= f.file_field :image %>
+ </div>
+
+     <div class="field">
+     <label>ネコのおなまえ</label>
+    <%= f.text_field :pet_name, class:"pet_name", placeholder:"にゃーにゃん", maxlength:"20" %>
+     </div>
+     
+
+
+     <div class="field">
+     <label>ネコの種類</label>
+     <%= f.collection_select(:bleed_id, Bleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+      </div>
+
+    <div class="field">
+    <label>性別</label>
+         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {prompt: "---"}, {class:"gender-select"}) %>
+    </div>
+    
+
+
+     <div class='field'>
+      <label>生年月日</label>
+      <span class="indispensable">必須</span>
+    
+      <%= raw sprintf(
+                  f.date_select(
+                    :birth,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1990,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>"%>
+    </div>
+
+ 
+
+
+     <div class="field">
+     <label>コメント（性格など）</label>
+      <%=f.text_area :personality,class:"pet_personal",placeholder:"大人しい性格です。",maxlength:"10"%>
+    </div>
+
+
+
+    <div class="field">
+    <%= f.submit "登録",class:"submit" %>
+  </div>
+
+  <%end%>
+ 
+ </div>
+
+</div>
+

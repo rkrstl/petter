@@ -1,5 +1,8 @@
 
-
+.detail-all{
+  height: 100%;
+  text-align: center;
+}
 
 .detail-left{
   margin: 40px;
@@ -54,17 +57,95 @@
 
 }
 
-.detail-petname{
-  box-shadow: 0 0 10px gray;
-
-  margin:  30px auto;
-  width: 200px;
-  background-color:rgba(73, 69, 73, 0.2);
-}
 
 .detail-text-title{
   width: 250px;
   margin: 20px auto;
   color: beige;
   border-bottom: gainsboro 1px solid;
+}
+
+
+/* ペットの内容 */
+
+
+.detail-pet-title{
+
+  color: bisque;
+
+
+}
+.detail-pet-image img{
+  border-radius: 50%;
+  width:  200px;
+  height: 200px;
+  
+  
+}
+
+
+
+
+.pet-label{
+  
+  width: 100px;
+  color:  beige;
+  display: inline-block;
+}
+.p{
+  margin: 20px;
+  border-bottom: beige 1px solid;
+  
+}
+.pet-left{
+  
+ display: inline-block;
+}
+
+.pet-right{
+
+  display: inline-block;
+}
+
+.pet-form{
+  width: 500px;
+  
+ margin: 60px auto;
+  text-align: center;
+}
+
+
+/* フォローの部分 */
+
+.following-count{
+  padding:5px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100px;
+  display: inline-block;
+}
+
+.follower-count{
+  margin: 5px;
+  padding:5px ;
+  background-color: rgba(255, 255, 255, 0.2);
+  
+  display: inline-block;
+}
+
+.follow-submit{
+  margin: 10px;
+  width: 10%;
+  background:rgba(63, 46, 63, 0.2);
+  color: #fff;
+  line-height: 35px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+.detail-user-tweets{
+  padding: 10px;
+  height: 50px;
+  width: 100%;
+  background:rgba(63, 46, 63, 0.2);
 }

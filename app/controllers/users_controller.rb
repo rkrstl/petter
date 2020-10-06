@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  
 
   def show
     @user=User.find(params[:id])
@@ -25,21 +26,26 @@ class UsersController < ApplicationController
     end
    
     def detail
+      @pet = Pet.find(params[:id])
       @user = User.find(params[:id])
+      @follow_count = @user.followings.count
+      @follwer_count=@user.followers.count
     end
 
     def lists
+      @pets = Pet.all
       @users=User.all
     end
 
     def likes
+      
       @user=User.find_by(id:params[:id])
       @likes=Like.where(user_id: @user.id)
     end
 
   private
   def user_params
-    params.require(:user).permit(:nickname,:email,:image,:introduction,:pet_name)
+    params.require(:user).permit(:nickname,:email,:image,:introduction)
   end
   
 

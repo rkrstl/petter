@@ -1,12 +1,14 @@
 
 
 .lists-all{
+  overflow: scroll;
   height: 100vh;
+  
 }
 
 .lists-user{
- 
-  width: 300px;
+ margin: 10px auto;
+  width: 400px;
   height: 200px;
 
 }

@@ -2,26 +2,26 @@
 
 
 <div class="lists-all">
+
 <div class="lists-user">
-  <% @users.each do |user|%>
+  <% @pets.each do |pet|%>
     <div class="lists-user-individual">
-      <% if user.image.attached? %>
-        <%=image_tag user.image, class:"lists-icon"%>
+      <% if pet.image.attached? %>
+        <%=image_tag pet.image, class:"lists-icon"%>
         <%else%>
         <%=image_tag 'default.jpg',class:"lists-icon"%>
       <%end%>
-      <div>user name : <%=link_to user.nickname,detail_user_path(user)%></div>
+      <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet)%></div>
     
-     <div> pet name : 
-     <%=user.pet_name%>
-     </div>
-
-     <div>bleed :</div>
+      
+    <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
+     <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
      
 
     </div>
     <%end%>
 
 </div>
+
 
 </div>

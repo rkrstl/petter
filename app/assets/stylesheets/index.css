@@ -1,3 +1,6 @@
+
+
+
 li {
   list-style: none;
 }
@@ -5,11 +8,8 @@ li {
 .wrap {
   overflow: hidden;
 }
-
-
-
-
- a{
+a{
+ 
   text-decoration: none;
 }
 
@@ -20,80 +20,45 @@ li {
 
 .site{
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* ナビゲーション */
 
-.box2{
-  background-color: rgba(255, 255, 255, 0.2);
-  width: auto;
-  height: 43px;
+
+h1 {
+  margin: 0; padding: 0;
+  font-size: 30px;
+}
+
+
+#header {
+  width: 100%;
+  padding: 30px 4% 10px;
+  background-color:rgba(73, 69, 73, 0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+   align-items: center;
+   height:70px;
+ 
+}
+
+ul {
   list-style: none;
-
-
-}
-.box2 a{
- 
-}
-
-menu ul{
   margin: 0;
-  padding: 0;
- 
+  display: flex;
+}
+li {
+  margin: 0 0 0 15px;
+  font-size: 14px;
 }
 
-.menu li a{
-  display: block;
-  padding: 10px;
-  color:white;
-  font-size: 15px;
+nav{
+  margin: 0 0 0 auto;
 }
 
-
-.menu li{
-  float: right;
-  width: auto;
-}
-
-.menu li:hover{
-  background-color: gray;
-}
-
-
-menu2 ul{
-  margin: 0;
-  padding: 0;
- 
-}
-
-.menu2 li a{
-  display: block;
-  padding: 10px;
-  color:white;
-  font-size: 15px;
-}
-
-
-.menu2 li{
-  float: left;
-  width: auto;
-}
-
-.menu2 li:hover{
-  background-color: gray;
-}
-
-
-
-
-.boxA:after{
-   content:"";
-   display: block;
-   clear: both;
-
-}
-
+/* ナビゲーション */
 .container{
   
  color:white;
@@ -184,3 +149,16 @@ menu2 ul{
 
 
 
+
+
+.menu li li {
+
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.menu li:hover > ul > li {
+  height: 3rem;
+  overflow: visible;
+}

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
  root to: "tweets#index" 
 
  resources :relationships,only: [:create, :destroy]
-
+ resources :pets
  resources :tweets do
    resources :likes,only: [:create, :destroy]
    resources :comments,only: [:create]
