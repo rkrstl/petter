@@ -10,9 +10,9 @@
 
  <nav class="header-nav1">
       <ul>
-        <li><a href="#">種類から探す</a></li>
-        <li><%=link_to 'ランキング',lank_tweets_path%></li>
-        <li><%=link_to 'ペット一覧',lists_users_path %></li>  
+        <li class="header-btn"><%=link_to '種類から探す',search_pets_path%></li>
+        <li class="header-btn"><%=link_to 'ランキング',lank_tweets_path%></li>
+        <li class="header-btn"><%=link_to 'ペット一覧',lists_users_path %></li>  
       </ul>
   </nav>
 
@@ -21,9 +21,9 @@
   <nav class="header-nav2">
 
     <ul>
-      <li><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <li><%=link_to '投稿',new_tweet_path %></li>
-      <li><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+      <li class="header-btn"><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li class="header-btn"><%=link_to '投稿',new_tweet_path %></li>
+      <li class="header-btn"><%=link_to current_user.nickname,user_path(current_user) %> </li> 
     </ul>
    </nav>
 
@@ -46,8 +46,8 @@
   <nav class="header-nav2">
 
     <ul>
-     <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+     <li class="header-btn"><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li class="header-btn"><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
     </ul>
    </nav>
 

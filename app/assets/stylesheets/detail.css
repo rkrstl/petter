@@ -98,7 +98,7 @@
   
 }
 .pet-left{
-  
+  text-align: left;
  display: inline-block;
 }
 
@@ -134,7 +134,7 @@
 
 .follow-submit{
   margin: 10px;
-  width: 10%;
+  width: 100px;
   background:rgba(63, 46, 63, 0.2);
   color: #fff;
   line-height: 35px;

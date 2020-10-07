@@ -17,11 +17,27 @@
  </div>
 
      <div class="field">
-     <label>ネコのおなまえ</label>
+     <label>ペットのおなまえ</label>
     <%= f.text_field :pet_name, class:"pet_name", placeholder:"にゃーにゃん", maxlength:"20" %>
      </div>
      
+     <div >
+     <p>
+      イヌ<%= f.radio_button :animal_type,:"ネコ"%>
+     
+     </p>
+     <p>
+      ネコ<%= f.radio_button :animal_type,:"イヌ"%>
+     
+     </p>
 
+     <p>
+      その他<%= f.radio_button :animal_type,:"その他"%>
+     
+     </p>
+     </div>
+
+     
 
      <div class="field">
      <label>ネコの種類</label>
@@ -33,6 +49,8 @@
          <%= f.collection_select(:gender_id, Gender.all, :id, :name, {prompt: "---"}, {class:"gender-select"}) %>
     </div>
     
+
+
 
 
      <div class='field'>

@@ -33,10 +33,13 @@ class PetsController < ApplicationController
   end
  end
 
+
+
+
   private
 
    def pet_params
-    params.require(:pet).permit(:image,:pet_name,:bleed_id,:birth,:personality,:gender_id).merge(user_id:current_user.id)
+    params.require(:pet).permit(:image,:pet_name,:bleed_id,:birth,:personality,:gender_id,:animal_type).merge(user_id:current_user.id)
    end
 
 

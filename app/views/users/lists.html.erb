@@ -6,17 +6,20 @@
 <div class="lists-user">
   <% @pets.each do |pet|%>
     <div class="lists-user-individual">
+
+    <div class="lists-image">
       <% if pet.image.attached? %>
         <%=image_tag pet.image, class:"lists-icon"%>
         <%else%>
         <%=image_tag 'default.jpg',class:"lists-icon"%>
       <%end%>
-      <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet)%></div>
-    
-      
-    <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
-     <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
-     
+      </div>
+
+      <div class="lists-pets-detail">
+        <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
+        <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
+        <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
+     </div>
 
     </div>
     <%end%>

@@ -1,0 +1,29 @@
+
+
+.search-all{
+  overflow: scroll;
+  height: 100vh;
+}
+
+
+select {
+  
+  width: 200px;
+  height: 30px;
+  margin: auto;
+}
+
+.search-form{
+  padding: 50px;
+  margin: 50px;
+  width: 700px;
+  background-color:rgba(73, 69, 73, 0.2);
+}
+
+.search-field{
+  width: 400px;
+  margin: 50px;
+ flex-direction: column;
+ display: flex;
+ background-color:rgba(73, 69, 73, 0.2);
+}

@@ -2,6 +2,18 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
+    def search
+      @animal_type = Pet.select("animal_type").distinct
+      @search= Pet.ransack(params[:q])
+      @pets=@search.result
+    end
+
+
+    private
+
+  
+  
   protected
 
   def configure_permitted_parameters

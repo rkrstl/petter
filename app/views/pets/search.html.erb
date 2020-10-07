@@ -1,0 +1,67 @@
+<%= render "shared/header" %>
+
+<div class="search-all">
+
+    <div class="search-form">
+
+        <%= search_form_for @search,url: search_pets_path do |f| %>
+
+        <div class="search-field">
+        <%=f.label :pet_name_cont,"名前で検索"%>
+        <%=f.search_field :pet_name_cont%>
+        </div>
+        <div class="search-field">
+        <%= f.label :bleed_id_eq, '種類の選択' %>
+        <%= f.collection_select :bleed_id_eq, Bleed.all, :id, :name, include_blank: '指定なし'%>
+        </div>
+
+        <div class="search-field">
+        <%= f.label :animal_type_eq,'動物の種類'%>
+        <%= f.collection_select :animal_type_eq, @animal_type, :animal_type, :animal_type, include_blank: '指定なし'%>
+        </div>
+
+
+        <%= f.submit "検索" %>
+        
+     <%end%>
+    </div>
+
+
+<%# ペット一覧 %>
+
+<div class="search-result">
+<div class="lists-all">
+
+<div class="lists-user">
+  <% @pets.each do |pet|%>
+    <div class="lists-user-individual">
+
+    <div class="lists-image">
+      <% if pet.image.attached? %>
+        <%=image_tag pet.image, class:"lists-icon"%>
+        <%else%>
+        <%=image_tag 'default.jpg',class:"lists-icon"%>
+      <%end%>
+      </div>
+
+      <div class="lists-pets-detail">
+        <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
+        <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
+        <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
+     </div>
+
+    </div>
+    <%end%>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
