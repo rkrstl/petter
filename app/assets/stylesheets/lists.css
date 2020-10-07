@@ -1,13 +1,14 @@
 
 
 .lists-all{
+  
   overflow: scroll;
   height: 100vh;
   
 }
 
 .lists-user{
- margin: 10px auto;
+ margin: 50px auto;
   width: 400px;
   height: 200px;
 
@@ -15,20 +16,30 @@
 
 .lists-user-individual{
   background-color: rgba(255, 255, 255, 0.2);
-  width: 400px;
-  height:200px ;
-  margin: 20px;
+  width: 550px;
+  height:170px ;
+ 
   border: 1px solid dimgray;
  
-  padding:30px;
+  padding:10px;
   
+}
+
+.lists-image{
+  margin: 20px;
+  float: left;
 }
 
 .lists-icon{
   
- margin-left: 40px;
+ 
   border-radius: 50%;
-  width:  60px;
-  height: 60px;
+  width:  100px;
+  height: 100px;
   box-shadow: 0 2px 6px #c1ced7;
+}
+
+.lists-pets-detail{
+  
+  padding: 20px;
 }
