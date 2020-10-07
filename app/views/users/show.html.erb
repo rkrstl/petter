@@ -56,7 +56,7 @@
   </div>
 
   <div class="user-follow u">
-    <%=link_to'登録したペット',pet_path%>
+    <%=link_to'登録したペット',pet_path(@user.pets.first)%>
   </div>
 
   <div class="user-allsee u">

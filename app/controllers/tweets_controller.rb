@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweets=Tweet.all
-    
+    @pets =Pet.all
   end
 
   def new

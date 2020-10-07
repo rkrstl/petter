@@ -26,13 +26,15 @@ class UsersController < ApplicationController
     end
    
     def detail
-      @pet = Pet.find(params[:id])
+      
       @user = User.find(params[:id])
+      @pet=@user.pets.first
       @follow_count = @user.followings.count
       @follwer_count=@user.followers.count
     end
 
     def lists
+
       @pets = Pet.all
       @users=User.all
     end
