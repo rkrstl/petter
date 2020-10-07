@@ -28,6 +28,7 @@ a{
 
 h1 {
   margin: 0; padding: 0;
+  font-family: fantasy;
   font-size: 30px;
 }
 
@@ -35,7 +36,7 @@ h1 {
 #header {
   width: 100%;
   padding: 30px 4% 10px;
-  background-color:rgba(73, 69, 73, 0.7);
+  background-color: #e4a972c2;
   position: fixed;
   top: 0;
   display: flex;
