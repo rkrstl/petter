@@ -22,19 +22,16 @@ class TweetsController < ApplicationController
   end
 
   def show
-    
     @tweet=Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
     @comment=Comment.new 
-    
-
   end
 
 
  def lank
    @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
+   @tag_lanks = TweetTag.find( TweetTagRelation.group(:tweet_tag_id).order('count(tweet_tag_id)desc').limit(4).pluck(:tweet_tag_id))
  end
-
 
   private
 
@@ -48,8 +45,4 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tags_form).permit(:title,:text,:image,:name).merge(user_id: current_user.id)
   end
-
-
-   
-
 end

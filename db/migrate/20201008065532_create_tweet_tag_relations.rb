@@ -1,8 +1,8 @@
 class CreateTweetTagRelations < ActiveRecord::Migration[6.0]
   def change
     create_table :tweet_tag_relations do |t|
-      t.references :tweet
-      t.references :tweet_tag
+      t.references :tweet,null:false,foreign_key:true
+      t.references :tweet_tag,null:false,foreign_key:true
       t.timestamps
     end
   end

@@ -84,8 +84,8 @@ ActiveRecord::Schema.define(version: 2020_10_08_065532) do
   end
 
   create_table "tweet_tag_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "tweet_id"
-    t.bigint "tweet_tag_id"
+    t.bigint "tweet_id", null: false
+    t.bigint "tweet_tag_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["tweet_id"], name: "index_tweet_tag_relations_on_tweet_id"
@@ -129,5 +129,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_065532) do
   add_foreign_key "plans", "users"
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
+  add_foreign_key "tweet_tag_relations", "tweet_tags"
+  add_foreign_key "tweet_tag_relations", "tweets"
   add_foreign_key "tweets", "users"
 end

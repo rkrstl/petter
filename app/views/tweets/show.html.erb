@@ -34,7 +34,12 @@
     
      <div class="t-show-real-text"><%=@tweet.text%></div>
     </div>
-
+     
+      <div>
+       <%@tweet.tweet_tags.each do |tag| %>
+          <%=tag.name%>
+       <%end%>
+      </div>
     </div>
 
 
