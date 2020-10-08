@@ -1,9 +1,15 @@
 <%= render "shared/header" %>
 
 <div class="edit-all">
+
+
+
 <div class="edit-contents">
 <%= form_with  model:@user,local:true do |user|%>
 
+ <div class="edit-title ">
+   ユーザー情報の編集
+ </div>
 
  <div class='edit-text-wrap e'>
       <label class="form-text">ニックネーム</label>
@@ -25,7 +31,7 @@
   </div>
 
   
-  <div class="edit-image">
+  <div class="edit-image e">
    <%= user.file_field :image, class:"pl e" %>
   </div>
   <div id="image-list"></div>
