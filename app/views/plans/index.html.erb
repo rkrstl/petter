@@ -1,0 +1,13 @@
+
+
+<%= render "shared/header" %>
+
+<%= link_to "予定をいれる", new_plan_path, class:"plan_new"%>
+ <%= week_calendar events: @plans do |date, plans| %>
+    <%= date %>
+    <% plans.each do |plan| %>
+      <div>
+        <%= plan.title %>
+      </div>
+    <% end %>
+  <% end %>
