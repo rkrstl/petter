@@ -14,7 +14,7 @@
 
 .plan-calendar{
   margin: 5%;
-  background-color: rgb(173, 172, 172);
+  /* background-color: rgb(173, 172, 172); */
   width: 800px;
 }
 
@@ -24,15 +24,16 @@
 
 .plan-new-all{
   text-align: center;
-  /* background-color: greenyellow; */
+  
 }
 
 .plan-new-time select{
   width: auto;
 }
 .plan-new-form{
-  margin:auto;
-  /* background-color: honeydew; */
+  padding: 30px;
+  margin:20px auto;
+  background-color: rgba(255, 255, 255, 0.2);
   width: 400px;
 }
 
@@ -47,6 +48,25 @@
   margin: 10px;
 }
 
-.plan-new-time{
+.plan-create{
+  border-radius: 4%;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
+.far{
+  color: black;
+}
+
+.calendar-heading{
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(153, 150, 150);
+  margin: 20px;
+}
+
+.simple-calendar{
+  margin: 30px;
 }

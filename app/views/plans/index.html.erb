@@ -5,16 +5,19 @@
 <div class="plan-all">
 
   <div class="plan-create">
-  <%= link_to "予定を作成", new_plan_path, class:"plan_new"%>
+  <%= link_to "予定を作成", new_plan_path, class:"plan_new"%><i class="fas fa-pencil-alt"></i>
   </div>
 
   <div class="plan-calendar">
-   <%= week_calendar events: @plans do |date, plans| %>
-      <%= date %>
+   <%= month_calendar events: @plans do |date, plans| %>
+      <%= date.day %>
       <% plans.each do |plan| %>
         <div class="plan-text">
           <%= plan.title %>
-          <%=plan.tag%>
+          <%=plan.tag%> 
+          <%= link_to plan_path(plan.id) , method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+          <%end%>
         </div>
       <% end %>
 
@@ -22,3 +25,5 @@
   </div>
 
 </div>
+
+

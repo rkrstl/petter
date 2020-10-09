@@ -109,7 +109,8 @@ nav{
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
-  margin: 10px auto;  
+  margin: 30px auto;  
+  text-align: center;
 }
 
 .listings:hover{

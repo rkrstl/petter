@@ -2,7 +2,7 @@ class PlansController < ApplicationController
 
 
   def index
-
+ 
     @plans = current_user.plans
     
   end
@@ -14,11 +14,28 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.create(plan_params)
     if @plan.save
-      redirect_to root_path
+      redirect_to plans_path
     else
       render :new
    end
   end
+
+  def edit
+    
+  end
+
+
+  def destroy
+    plan = Plan.find(params[:id])
+    if plan.destroy
+       redirect_to plans_path
+    else
+      render :index
+    end
+ end
+
+
+
 
 
   def show

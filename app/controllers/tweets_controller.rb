@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except:[:index,:show, :search]
 
   def index
+    plan
     @tweets=Tweet.all
     @pets =Pet.all
   end
@@ -34,6 +35,13 @@ class TweetsController < ApplicationController
  end
 
   private
+    
+
+  def plan
+    if user_signed_in?
+    @plans = current_user.plans
+    end
+  end
 
   def move_to_index
     unless user_signed_in?

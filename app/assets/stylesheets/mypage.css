@@ -28,7 +28,15 @@ a{
 }
 
 .user-nickname{
-  margin: 20px;
+  width: 800px;
+  border-bottom: dimgray 1.5px dotted ;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3%;
+  padding: 10px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 .user-profile{
   float: right;
@@ -71,14 +79,6 @@ a{
   background-color:gray;
 }
 
-.user-nickname{
-  color: rgb(109, 105, 105);
-  margin: 10px;
-  padding: 10px;
-  font-size: large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-}
 
 
 

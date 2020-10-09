@@ -9,9 +9,9 @@
 
 <div class="top-wrapper">
 <div class="container">
-       </p>About petter</p>
+       </p><i class="fas fa-question-circle"></i>About petter</p>
         <p>ペットを投稿で共有するサイトです</p>
-        <p>自慢のペットを投稿して共有しましょう</p>
+        <p>ペットの投稿やペットの予定管理ができます</p>
         <p></p>
     </div>
 
@@ -47,7 +47,7 @@
         <%=link_to 'ペットの編集',edit_pet_path(current_user.pets.first)%> <i class="fas fa-edit"></i>
         
        <%else%>
-       <%=link_to 'ペットを登録',new_pet_path%>
+       <%=link_to 'ペットを登録',new_pet_path%><i class="fas fa-cat"></i>
        <%end%>
 
        <%else%>
@@ -60,6 +60,31 @@
 
 
 </div>
+
+<% if user_signed_in?%>
+<div class="lists-title">今週の予定</div>
+<div>
+<%= week_calendar events: @plans do |date, plans| %>
+      <%= date.day %>
+      <% plans.each do |plan| %>
+        <div class="plan-text">
+          <%= plan.title %>
+          <%=plan.tag%> 
+          <%= link_to plan_path(plan.id) , method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+          <%end%>
+        </div>
+      <% end %>
+      <%end%>
+</div>
+
+ <p class="listings">
+        <%= link_to '予定を作成',new_plan_path %><i class="fas fa-pen"></i>
+      </p>
+
+
+<%end%>
+
 
   <div class="pets">
 
