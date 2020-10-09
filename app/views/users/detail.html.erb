@@ -43,6 +43,8 @@
 
   </div>
 
+
+<% if @pet.present?%>
    <div class="detail-pet-all">
 
        <div class="detail-pet-title">
@@ -92,12 +94,13 @@
       </div>
      
   <div>
+  <%end%>
       
      
 
 
  <div class="detail-user-tweets">
-         <%=@pet.user.nickname%>さんの投稿
+         <%=@user.nickname%>さんの投稿
         </div>
 
 
