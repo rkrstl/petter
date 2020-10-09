@@ -31,8 +31,11 @@
 
 }
 
-.rank-title{
-  margin: 10px;
+.rank-main-title{
+  width: 400px;
+  border-bottom: dimgray 1.5px dotted;
+  font-size: 20px;
+  margin: 100px 5% 1px 5%;
 }
 
 .rank-nickname{

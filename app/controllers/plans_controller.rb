@@ -24,6 +24,8 @@ class PlansController < ApplicationController
     
   end
 
+ 
+
 
   def destroy
     plan = Plan.find(params[:id])
