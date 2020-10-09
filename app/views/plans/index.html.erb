@@ -2,13 +2,23 @@
 
 <%= render "shared/header" %>
 
-<%= link_to "予定をいれる", new_plan_path, class:"plan_new"%>
- <%= week_calendar events: @plans do |date, plans| %>
-    <%= date %>
-    <% plans.each do |plan| %>
-      <div>
-        <%= plan.title %>
-        
-      </div>
+<div class="plan-all">
+
+  <div class="plan-create">
+  <%= link_to "予定を作成", new_plan_path, class:"plan_new"%>
+  </div>
+
+  <div class="plan-calendar">
+   <%= week_calendar events: @plans do |date, plans| %>
+      <%= date %>
+      <% plans.each do |plan| %>
+        <div class="plan-text">
+          <%= plan.title %>
+          <%=plan.tag%>
+        </div>
+      <% end %>
+
     <% end %>
-  <% end %>
+  </div>
+
+</div>

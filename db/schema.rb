@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2020_10_08_065532) do
     t.string "title"
     t.text "content"
     t.date "start_time"
+    t.string "tag"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_plans_on_user_id"

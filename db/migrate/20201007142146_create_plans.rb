@@ -5,6 +5,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string :title
       t.text   :content
       t.date :start_time
+      t.string   :tag
       
       t.timestamps
     end

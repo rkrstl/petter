@@ -1,27 +1,69 @@
 
 
 <%= render "shared/header" %>
-<%= form_with(model: @plan, local: true) do |f| %>
 
-  <div class="title">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+<div class="plan-new-all">
 
-    <div class="time">
-    <%= f.label :start_time %>
-    <%= f.datetime_select :start_time %>
-  </div>
+ <div class="plan-new-form">
+   <%= form_with(model: @plan, local: true) do |f| %>
+    
 
-  <div class="content">
-    <%= f.label :content %>
-    <%= f.text_field :content %>
-  </div>
+      <div class="plan-new-time">
+      <%= f.label :時刻 %>
+      <%= f.datetime_select :start_time %>
+      </div>
 
+<div class="plan-new-tag">
+ 
+  <p>
+       <i class="fas fa-broom"></i><%= f.label :tag, "そうじ", {value: :"そうじ", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"そうじ"%>
+  </p>
+  <p>
+      <i class="fas fa-dog"></i><%= f.label :tag, "さんぽ", {value: :"さんぽ", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"さんぽ"%>
+  </p>
+  <p>
+  <i class="fas fa-bone"></i><%= f.label :tag, "ごはん", {value: :"ごはん", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"ごはん"%>
+  </p>
+  <p>
+     <i class="far fa-star"></i> <%= f.label :tag, "サロン", {value: :"サロン", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"サロン"%>
+  </p>
+
+  <p>
+     <i class="fas fa-cut"></i> <%= f.label :tag, "爪切り", {value: :"爪切り", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"爪切り"%>
+  </p>
+
+  <p>
+      <i class="fas fa-bath"></i><%= f.label :tag, "おふろ", {value: :"おふろ", style: "display: inline-block;"} %>
+      <%= f.radio_button :tag,:"おふろ"%>
+  </p>
+</div>
   
+  <div class="plan-new-title">
+      <%= f.label :その他 %>
+      <%= f.text_field :title %>
+    </div>
+
+
+
+    <div class="plan-new-content">
+      <%= f.label :メモ %>
+      <%= f.text_area :content %>
+    </div>
+ 
+
+ 
 
   <div class="submit">
-    <%= f.submit %>
+    <%= f.submit '送信',class:'submit' %>
   </div>
 
 <% end %>
+
+</div>
+
+</div>

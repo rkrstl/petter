@@ -1,0 +1,52 @@
+
+
+.plan-all{
+  height: 100vh;
+}
+
+.plan-new-all{
+ height: 100vh;
+}
+
+.plan-create{
+  margin: 5%;
+}
+
+.plan-calendar{
+  margin: 5%;
+  background-color: rgb(173, 172, 172);
+  width: 800px;
+}
+
+.plan-text{
+  font-size: 13px;
+}
+
+.plan-new-all{
+  text-align: center;
+  /* background-color: greenyellow; */
+}
+
+.plan-new-time select{
+  width: auto;
+}
+.plan-new-form{
+  margin:auto;
+  /* background-color: honeydew; */
+  width: 400px;
+}
+
+.plan-new-tag{
+  margin: 20px;
+  display: inline-block;
+  text-align: left;
+  
+}
+
+.plan-new-content{
+  margin: 10px;
+}
+
+.plan-new-time{
+
+}
