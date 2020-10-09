@@ -63,24 +63,30 @@
 
 <% if user_signed_in?%>
 <div class="lists-title">今週の予定</div>
-<div>
-<%= week_calendar events: @plans do |date, plans| %>
-      <%= date.day %>
-      <% plans.each do |plan| %>
-        <div class="plan-text">
-          <%= plan.title %>
-          <%=plan.tag%> 
-          <%= link_to plan_path(plan.id) , method: :delete do%>
-          <i class="far fa-trash-alt"></i>
-          <%end%>
-        </div>
-      <% end %>
-      <%end%>
-</div>
+  <div>
+  <%= week_calendar events: @plans do |date, plans| %>
+        <%= date.day %>
+        <% plans.each do |plan| %>
+          <div class="plan-text">
+            <%= plan.title %>
+            <div class="calendar-btn">
+            <%=plan.tag%> 
+            <%= link_to plan_path(plan.id) , method: :delete do%>
+            <i class="far fa-trash-alt"></i>
+            <%end%>
+            </div>
+          </div>
+        <% end %>
+  <%end%>
+  </div>
 
- <p class="listings">
-        <%= link_to '予定を作成',new_plan_path %><i class="fas fa-pen"></i>
-      </p>
+
+
+
+
+   <p class="listings">
+    <%= link_to '予定を作成',new_plan_path %><i class="fas fa-pen"></i>
+  </p>
 
 
 <%end%>
