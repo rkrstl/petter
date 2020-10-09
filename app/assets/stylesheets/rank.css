@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-around;
   height: 100%;
+  overflow: scroll;
 }
 
 .rank-individual{
@@ -14,7 +15,7 @@
   color: rgb(59, 39, 39);
   width: 600px;
   height: 800px;
-  background-color:rgba(255, 255, 255, 0.2);
+  
   text-align: center;
   padding: 30px;
 }
@@ -25,18 +26,31 @@
   padding: 50px;
   width: 600px;
   height: 800px;
-  background-color:rgba(255, 255, 255, 0.2);
+  
   text-align: center;
 
 }
 
+.rank-title{
+  margin: 10px;
+}
+
+.rank-nickname{
+  font-size: 15px;
+
+}
+
+
+
 .rank-num{
+  border-bottom: 2px dotted gray;
   margin: auto;
   font-size: large;
 }
 
 .rank-tag-num{
-
+  color: aliceblue;
+  border-bottom: 2px dotted gray;
   margin: auto;
   font-size: large;
 }

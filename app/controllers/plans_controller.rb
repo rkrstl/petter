@@ -4,6 +4,7 @@ class PlansController < ApplicationController
   def index
 
     @plans = current_user.plans
+    
   end
 
   def new
@@ -28,7 +29,7 @@ class PlansController < ApplicationController
 private
  
 def plan_params
-  params.require(:plan).permit(:title,:content,:start_time).merge(user_id:current_user.id)
+  params.require(:plan).permit(:title,:content,:start_time,plan_tag_ids:[]).merge(user_id:current_user.id)
 end
 
 
