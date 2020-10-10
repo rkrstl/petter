@@ -36,3 +36,6 @@ $(document).on('click', '.plan_modal_wrapper, .fa-times-circle', function() {
   $('.plan_modal').hide();
   $('.plan_modal_content').hide();
 })
+
+
+$('.t-show-image').slick();

@@ -23,11 +23,16 @@
         title : <%=@tweet.title%>
       </div>
 
-        <div class="t-show-image ts">
+        
           <% if @tweet.images.attached? %>
-          <%=image_tag @tweet.images[0].variant(resize: "400x400")%>
+          <% @tweet.images.each  do |image|%>
+              <ul class="t-show-image ts">
+                  <li><%=image_tag image.variant(resize: "400x400"),class:"image-slide"%></li>
+              </ul>
+         <%end%>
+         
           <%end%>
-        </div>
+     
 
         
         <div class="t-show-real-text ts">
