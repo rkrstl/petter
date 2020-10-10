@@ -23,9 +23,14 @@
             <div class="follower-name">
             <i class="fas fa-user"></i> <%= link_to f.nickname,detail_user_path(f)%>
             </div>
+            <%if @pets.present?%>
             <div class="follower-pet-name">
             <i class="fas fa-cat"></i> pet name: <%=@pets.first.pet_name%>
             </div>
+            <%else%>
+            <i class="fas fa-cat"></i> pet name: まだ登録されていません
+            <%end%>
+
             <% if f.introduction.present?%>
             <div class="follower-introduction">
             <i class="far fa-sticky-note"></i> introduction :<%=f.introduction%>

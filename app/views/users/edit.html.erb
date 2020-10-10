@@ -19,15 +19,28 @@
 
   
 
-<div class="edit-introduction e">
-<label class="form-intro">自己紹介</label>
-<%=user.text_area :introduction ,class:"pl", placeholder:"はじめまして。猫を飼っています。よろしくお願いします。"%>
-</div>
+  <div class="edit-introduction e">
+  <label class="form-intro">自己紹介</label>
+  <%=user.text_area :introduction ,class:"pl", placeholder:"はじめまして。猫を飼っています。よろしくお願いします。"%>
+  </div>
 
-<div class='edit-text-wrap e'>
+  <div class='edit-text-wrap e'>
       <label class="form-text">メールアドレス</label>
     
     <%= user.email_field :email, class:"input-default pl", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+  </div>
+
+   <div class="edit-image e">
+    <label>パスワード</label>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= user.password_field :password, autocomplete: "new-password " ,class:"pl"%>
+  </div>
+
+  <div class="edit-image e">
+    <label>パスワードの確認<label>
+    <%= user.password_field :password_confirmation, autocomplete: "new-password",class:"pl" %>
   </div>
 
   
