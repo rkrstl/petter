@@ -37,7 +37,8 @@ select {
 
 .search-btn{
   margin: 20px auto;
-  width: 40%;
+  width: 300px;
+  margin: 30px auto;
   background:rgba(73, 69, 73, 0.2);
   color: #fff;
   line-height: 48px;

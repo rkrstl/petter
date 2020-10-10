@@ -32,11 +32,6 @@
         <%= f.collection_select :dog_bleed_id_eq, DogBleed.all, :id, :name, include_blank: '指定なし'%>
         </div>
 
-        
-
-
-
-
         <div class="search-field">
         <%= f.submit "検索",class:"search-btn" %>
         </div>
@@ -66,6 +61,7 @@
         <div class="lists-pet-name"><%=link_to pet.pet_name,detail_user_path(pet.user)%></div>
         <div class="lists-pet-type"><%= pet.animal_type.name %></div>
         <div class=><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
+      
         <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
      </div>
 
@@ -78,7 +74,7 @@
 </div>
 
 </div>
-<>
+
 
 
 
