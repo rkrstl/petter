@@ -22,6 +22,29 @@ class TweetsController < ApplicationController
      end
   end
 
+
+  def edit
+    @tweet=Tweet.find(params[:id])
+  end
+
+  def update
+    @tweet=Tweet.find(params[:id])
+    if @tweet.update(tweet_params)
+      redirect_to plans_path
+     else
+    render :edit
+  end
+  end
+
+  def destroy
+    tweet=Tweet.find(params[:id])
+    if tweet.destroy
+       redirect_to root_path
+    else
+      render :show
+    end
+ end
+
   def show
     @tweet=Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)

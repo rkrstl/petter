@@ -59,3 +59,6 @@ gem 'simple_calendar', '~> 2.0'
 gem 'active_hash'
 gem 'ransack'
 gem 'simple_calendar', '~> 2.0'
+group :production do
+  gem 'rails_12factor'
+end
