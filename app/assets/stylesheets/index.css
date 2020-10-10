@@ -46,7 +46,7 @@ h1 {
 }
 
 .header-btn a:hover{
-  font-size: 15px;
+ 
  color: dimgray;
 }
 
@@ -109,7 +109,8 @@ nav{
  box-shadow: 0 0 5px 1px #ccc; /* 影 */
   padding: 20px;
   width: 300px;
-  margin: 10px auto;  
+  margin: 30px auto;  
+  text-align: center;
 }
 
 .listings:hover{
@@ -167,4 +168,75 @@ nav{
 .menu li:hover > ul > li {
   height: 3rem;
   overflow: visible;
+}
+
+
+/* モーダルウィンドウ */
+
+.calendar-btn{
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  opacity: .6;
+  transition: .3s;
+}
+
+.plan_modal_wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  display: none;
+}
+
+.plan_modal {
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 100px auto 0;
+
+  display: none;
+  text-align: right;
+}
+
+.plan_modal_content {
+  display: none;
+  text-align: center;
+}
+
+.modal-title{
+  color: rgb(41, 40, 40);
+  border-bottom: black 2px dotted;
+  margin: 10px;
+}
+
+.modal-delete{
+ color: black;
+  margin: 30px;
+}
+.modal-delete a{
+ color: black;
+}
+
+
+.modal-text{
+  
+}
+
+.fa-times-circle {
+  text-align: left;
+  cursor: pointer;
+  
+}
+
+.fas{
+  color: rgb(94, 94, 94);
 }

@@ -27,6 +27,7 @@ has_many :tweets
 has_many :likes
 has_many :comments
 has_many :pets
+has_many :plans
 
 has_many :relationships
 has_many :followings, through: :relationships, source: :follow

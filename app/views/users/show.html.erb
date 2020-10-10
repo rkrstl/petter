@@ -6,7 +6,7 @@
 
   <div class="user-nickname ">
   
-    <%= @user.nickname%>さんのマイページ
+    <i class="fas fa-user"></i><%= @user.nickname%>さんのマイページ
   </div>
 
 <div class="all-mypage">
@@ -55,12 +55,18 @@
     <%=link_to '投稿したtweet',mypage_user_path %>
   </div>
 
+  <% if current_user.pets.present?%>
   <div class="user-follow u">
     <%=link_to'登録したペット',pet_path(@user.pets.first)%>
   </div>
+<%end%>
 
   <div class="user-allsee u">
     <%=link_to 'みんなからみたあなたのページ',detail_user_path(@user)%>
+  </div>
+
+ <div class="user-calendar u">
+    <%=link_to 'カレンダー',plans_path%>
   </div>
 
 </div>

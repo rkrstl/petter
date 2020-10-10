@@ -5,16 +5,23 @@ body{
   color: rgb(68, 65, 65);
 }
 .show-contents{
-  height: 100vh;
+  text-align: center;
+  height: 100%;
   width: 900px;
-  margin: 60px 40px;
-  /* display: flex; */
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  
 }
 
-.show-content-left{
+.t-show-content{
+  margin: auto;
+}
+
+.show-content{
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.2);
-  float: left;
+ 
 
 }
 
@@ -33,7 +40,7 @@ body{
 
 
 .show-contents-right{
-  float: right;
+  
   width: 400px;
   margin-top: 30px;
   
@@ -54,24 +61,24 @@ body{
   margin-bottom: 20px;
 }
 
+/* いいね機能 */
 .t-show-likes{
-  margin: 20px;
+  margin: 40px auto;
   border: 1px solid gray;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 40px;
-    width: 15vw;
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 40px;
+  width: 200px;
+  min-width: 200px;
+  
 }
 
 .t-show-likes:hover{
   background-color: indianred;
 
 }
+
+
 
 .t-show-real-text{
   padding: 20px;
@@ -81,6 +88,7 @@ body{
 }
 
 
+/* アイコン画像 */
 .t-show-icon{
   display: inline-block;
   border-radius: 50%;
@@ -90,3 +98,17 @@ body{
 }
 
 
+
+.comment-submit{
+  width: 30%;
+  background:rgba(73, 69, 73, 0.2);
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.t-show-real-text{
+  margin: auto;
+  text-align: center;
+}

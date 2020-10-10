@@ -1,59 +1,61 @@
 <%= render "shared/header" %>
 
 <div class="show-contents">
-<div class="t-show-contents">
 
-  <div class="show-content-left">
 
-    
-    <div class="t-show-icon">
-      <% if @tweet.user.image.attached? %>
-      <%=image_tag @tweet.user.image, class:"t-show-icon"%>
-      <%else%>
-        <%=image_tag 'default.jpg',size: '100x100', class:"t-show-icon" %>
-      <%end%>
+   <div class="show-content">
+
       
-    </div>
-
-      <div class="t-show-nickname">
-      <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user),class: "user-nickname"%>さんの投稿</li> 
-      </div>
-      <div class="t-show-title ts">
-      title : <%=@tweet.title%>
-    </div>
-
-      <div class="t-show-image ts">
-        <% if @tweet.image.attached? %>
-        <%=image_tag @tweet.image.variant(resize: "400x400")%>
+      <div class="t-show-icon">
+        <% if @tweet.user.image.attached? %>
+        <%=image_tag @tweet.user.image, class:"t-show-icon"%>
+        <%else%>
+          <%=image_tag 'default.jpg',size: '100x100', class:"t-show-icon" %>
         <%end%>
       </div>
 
-       
-
-    <div class="t-show-text ts">
-    
-     <div class="t-show-real-text"><%=@tweet.text%></div>
-    </div>
-
-    </div>
+        <div class="t-show-nickname">
+        <li><%= link_to @tweet.user.nickname,detail_user_path(@tweet.user)%>さんの投稿</li> 
+        </div>
 
 
- <div class="show-contents-right">
-   
-   <div class="show-warn">
-   ※ 相手のことを考え丁寧なコメントを心がけましょう。
-   不快な言葉遣いなどは利用制限や退会処分となることがあります。
-  </div>
+        <div class="t-show-title ts">
+        title : <%=@tweet.title%>
+      </div>
 
+        <div class="t-show-image ts">
+          <% if @tweet.image.attached? %>
+          <%=image_tag @tweet.image.variant(resize: "400x400")%>
+          <%end%>
+        </div>
+
+        
+        <div class="t-show-real-text ts">
+        <%=@tweet.text%>
+        </div>
+        
+        
+        <div>
+        <%@tweet.tweet_tags.each do |tag| %>
+            <%=tag.name%>
+        <%end%>
+        </div>
+
+   </div>
+  
+  
+
+  
+    <div class="t-show-comments ts">
     <div id="like-<%= @tweet.id %>", class="t-show-likes">
      <%= render partial: 'likes/like',locals: { tweet: @tweet }%>
     </div>
-
+   </div>
 
     <div class="t-show-comments ts">
       <%= form_with(model: [@tweet, @comment]) do |f| %>
         <%= f.text_field :text ,class:"show-ph ts"%>
-      <div>  <%= f.submit '送信' ,class:"submit ts"%></div>
+      <div>  <%= f.submit '送信' ,class:"comment-submit ts"%></div>
       <%end%>
     </div>
 
@@ -63,9 +65,10 @@
         <p class="ts"><%=link_to @tweet.user.nickname,detail_user_path(@tweet.user)%>:<%= c.text %></p>
       <%end%> 
    </div>
+
+
+
   </div>
 
-
-</div>
 
 </div>

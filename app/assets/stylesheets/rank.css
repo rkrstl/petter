@@ -1,17 +1,59 @@
 
+.rank-all{
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  overflow: scroll;
+}
+
+.rank-individual{
+  margin: 20px 0 0 0;
+}
 
 .rank-tweet{
-  color: white;
+  margin: 0 0 30px 0;
+  color: rgb(59, 39, 39);
   width: 600px;
-  height: 350px;
-  background-color:rgba(73, 69, 73, 0.2);
+  height: 800px;
+  
   text-align: center;
-  margin: 30px auto;
   padding: 30px;
 }
 
+
+.rank-tag-all{
+  margin: 0 0 30px 0;
+  padding: 50px;
+  width: 600px;
+  height: 800px;
+  
+  text-align: center;
+
+}
+
+.rank-main-title{
+  width: 400px;
+  border-bottom: dimgray 1.5px dotted;
+  font-size: 20px;
+  margin: 100px 5% 1px 5%;
+}
+
+.rank-nickname{
+  font-size: 15px;
+
+}
+
+
+
 .rank-num{
-  margin: 10px;
+  border-bottom: 2px dotted gray;
+  margin: auto;
   font-size: large;
-  border-bottom: solid 2px dimgray;
+}
+
+.rank-tag-num{
+  color: aliceblue;
+  border-bottom: 2px dotted gray;
+  margin: auto;
+  font-size: large;
 }

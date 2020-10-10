@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
  root to: "tweets#index" 
-
+ resources :plans
  resources :relationships,only: [:create, :destroy]
  resources :pets do
    collection do
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
  end
 
  resources :users do
+  
   member do
     get 'mypage'
   end
@@ -30,7 +31,6 @@ Rails.application.routes.draw do
   member do 
     get 'likes'
   end
-
  end
 
 end

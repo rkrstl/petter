@@ -1,0 +1,67 @@
+
+
+<%= render "shared/header" %>
+
+<div class="plan-all">
+
+  <div class="plan-create">
+  <%= link_to "予定を作成", new_plan_path, class:"plan_new"%><i class="fas fa-pencil-alt"></i>
+  </div>
+
+  <div class="plan-calendar">
+   <%= month_calendar events: @plans do |date, plans| %>
+      <%= date.day %>
+      <% plans.each do |plan| %>
+       
+        <div class="calendar-btn">
+          <%= plan.title %>
+          <%=plan.tag%> 
+           <%= link_to plan_path(plan.id) , method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+          <%end%>
+        </div>
+         
+       
+      <% end %>
+
+    <% end %>
+  </div>
+
+</div>
+
+
+<div class="plan_modal_wrapper">
+ <div class="plan_modal">
+  <div class="plan_show_modal plan_modal_content">
+  
+  
+    <% @plans.each do |plan| %>
+      <div class="calendar-btn">
+
+    
+       <span class="fa_wrapper"><i class="far fa-times-circle"></i></span>
+       
+       <div class="modal-title">予定の詳細</div>
+
+        <div class="modal-text">
+          <%= plan.title %>
+          <%=plan.tag%> 
+          <%if plan.content.present?%>
+          メモ<%=plan.content%>
+          <%end%>
+        </div>
+
+        <div class="modal-delete">
+          <%= link_to plan_path(plan.id) , method: :delete do%>
+           削除<i class="far fa-trash-alt"></i>
+          <%end%>
+        <div>
+
+      </div>
+
+    <% end %>
+
+  </div>
+ </div>
+</div>
+

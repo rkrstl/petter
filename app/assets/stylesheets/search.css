@@ -14,16 +14,23 @@ select {
 }
 
 .search-form{
-  padding: 50px;
-  margin: 50px;
-  width: 700px;
+  padding: 30px;
+  margin: 10px auto;
+  width: 500px;
   background-color:rgba(73, 69, 73, 0.2);
 }
 
 .search-field{
   width: 400px;
-  margin: 50px;
+  
  flex-direction: column;
  display: flex;
- background-color:rgba(73, 69, 73, 0.2);
+ /* background-color:rgba(73, 69, 73, 0.2); */
+}
+
+.search-main-title{
+  width: 400px;
+  border-bottom: dimgray 1.5px dotted;
+  font-size: 20px;
+  margin: 100px 5% 1px 5%;
 }

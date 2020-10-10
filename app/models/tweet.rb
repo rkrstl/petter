@@ -2,6 +2,8 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_one_attached :image
+  has_many :tweet_tag_relations
+  has_many :tweet_tags, through: :tweet_tag_relations
 
   has_many :likes, dependent: :destroy
   def like_user(user_id)
@@ -9,14 +11,7 @@ class Tweet < ApplicationRecord
   end
 
 
-# 画像
- validates :image,presence: true
 
-#  タイトル
-validates  :title,presence: true
-
-# text
-validates :text,presence: true
   
 end
 

@@ -8,11 +8,13 @@
   </h1>
  
 
+ 
+
  <nav class="header-nav1">
       <ul>
-        <li class="header-btn"><%=link_to '種類から探す',search_pets_path%></li>
-        <li class="header-btn"><%=link_to 'ランキング',lank_tweets_path%></li>
-        <li class="header-btn"><%=link_to 'ペット一覧',lists_users_path %></li>  
+        <li class="header-btn"><i class="fas fa-search"></i><%=link_to '種類から探す',search_pets_path%></li>
+        <li class="header-btn"><i class="fas fa-crown"></i><%=link_to 'ランキング',lank_tweets_path%></li>
+        <li class="header-btn"><i class="fas fa-paw"></i><%=link_to 'ペット一覧',lists_users_path %></li>  
       </ul>
   </nav>
 
@@ -20,10 +22,11 @@
 
   <nav class="header-nav2">
 
-    <ul>
-      <li class="header-btn"><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
-      <li class="header-btn"><%=link_to '投稿',new_tweet_path %></li>
-      <li class="header-btn"><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+    <ul>     
+      <li class="header-btn"><i class="fas fa-user"></i><%=link_to current_user.nickname,user_path(current_user) %> </li> 
+      <li class="header-btn"><i class="fas fa-pencil-alt"></i><%=link_to '投稿',new_tweet_path %></li>
+      <li class="header-btn"><i class="fas fa-calendar-alt"></i><%= link_to 'カレンダー',plans_path%>
+      <li class="header-btn"><i class="fas fa-sign-out-alt"></i><%= link_to 'ログアウト',destroy_user_session_path, method: :delete, class: "logout" %></li>
     </ul>
    </nav>
 

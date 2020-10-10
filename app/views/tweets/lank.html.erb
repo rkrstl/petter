@@ -1,21 +1,41 @@
 <%= render "shared/header" %>
 
 
-    <% @all_ranks.each.each.with_index(1) do |tweet,i|%>
+<div class="rank-main-title">
+  <i class="fas fa-crown"></i> ランキング
+  </div>
+<div class="rank-all">
+
+  
+   
     <div class="rank-tweet">
-      <%= link_to tweet_path(tweet.id) do %>
+       <div>ツイートのいいねランキング</div>
+      <% @all_ranks.each.with_index(1) do |tweet,i|%>
+       <div class="rank-individual">
+        <%= link_to tweet_path(tweet.id) do %>
         <div class="rank-num">第<%= i %>位 </div>  
         <div class="rank-title"><%=tweet.title%></div>
         
-        <div class="rank-image">
+      <div class="rank-image">
         <% if tweet.image.attached?%>
         <%=image_tag tweet.image.variant(resize: "200x200")%>
         <%end%>
         </div>
+
         <div class="rank-nickname">By <%=tweet.user.nickname%></div>
-      <%end%>
-    </div>
+        <%end%>
+        </div>
+       <%end%>
+      </div>
 
     
-    <%end%>
+      <div class="rank-tag-all">
+      <div>人気タグランキング</div>
+        <% @tag_lanks.each.with_index(1) do |tag,i| %>
+          <div class="rank-tag-num">第<%= i %>位 </div> 
+          <div class="rank-tag"><%= tag.name%></div>
+        <%end%>
+      </div>
 
+
+ </div>

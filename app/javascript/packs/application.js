@@ -17,3 +17,22 @@ require('../header')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
+$(function() {
+  $(document).on('click', '.calendar-btn', function() {
+    $('.plan_modal_wrapper').show();
+    $('.plan_modal').show();
+    if ($(this).hasClass('calendar-btn')) {
+      $('.plan_show_modal').show();
+    } else {
+      $('.plan_show_modal').show();
+    }
+  });
+});
+
+$(document).on('click', '.plan_modal_wrapper, .fa-times-circle', function() {
+  $('.plan_modal_wrapper').hide();
+  $('.plan_modal').hide();
+  $('.plan_modal_content').hide();
+})

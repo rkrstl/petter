@@ -2,18 +2,20 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except:[:index,:show, :search]
 
   def index
+    plan
     @tweets=Tweet.all
     @pets =Pet.all
   end
 
   def new
-     @tweet=Tweet.new
+     @tweet=TagsForm.new
   end
 
 
   def create
-     @tweet=Tweet.create(tweet_params)
-     if @tweet.save
+     @tweet=TagsForm.new(tweet_params)
+     if @tweet.valid?
+        @tweet.save
       redirect_to root_path
      else
       render :new
@@ -21,21 +23,25 @@ class TweetsController < ApplicationController
   end
 
   def show
-    
     @tweet=Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
     @comment=Comment.new 
-    
-
   end
 
 
  def lank
    @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
+   @tag_lanks = TweetTag.find( TweetTagRelation.group(:tweet_tag_id).order('count(tweet_tag_id)desc').limit(4).pluck(:tweet_tag_id))
  end
 
-
   private
+    
+
+  def plan
+    if user_signed_in?
+    @plans = current_user.plans
+    end
+  end
 
   def move_to_index
     unless user_signed_in?
@@ -45,10 +51,6 @@ class TweetsController < ApplicationController
 
 
   def tweet_params
-    params.require(:tweet).permit(:title,:text,:image).merge(user_id: current_user.id)
+    params.require(:tags_form).permit(:title,:text,:image,:name).merge(user_id: current_user.id)
   end
-
-
-   
-
 end
