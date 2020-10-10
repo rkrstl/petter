@@ -15,9 +15,13 @@
        
         <div class="calendar-btn">
           <%= plan.title %>
-          <%=plan.tag%> 
+         <%=plan.tag%> 
            <%= link_to plan_path(plan.id) , method: :delete do%>
           <i class="far fa-trash-alt"></i>
+          <%end%>
+
+          <%= link_to edit_plan_path(plan.id),method: :get do %>
+          <i class="fas fa-edit"></i>
           <%end%>
         </div>
          
@@ -54,6 +58,12 @@
         <div class="modal-delete">
           <%= link_to plan_path(plan.id) , method: :delete do%>
            削除<i class="far fa-trash-alt"></i>
+          <%end%>
+        <div>
+
+         <div class="modal-delete">
+          <%= link_to edit_plan_path(plan.id) , method: :get do%>
+           編集<i class="fas fa-edit"></i>
           <%end%>
         <div>
 

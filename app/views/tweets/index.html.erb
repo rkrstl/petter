@@ -74,6 +74,9 @@
             <%= link_to plan_path(plan.id) , method: :delete do%>
             <i class="far fa-trash-alt"></i>
             <%end%>
+            <%= link_to edit_plan_path(plan.id),method: :get do %>
+          <i class="fas fa-edit"></i>
+          <%end%>
             </div>
           </div>
         <% end %>
