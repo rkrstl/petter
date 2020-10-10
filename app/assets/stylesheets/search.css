@@ -16,13 +16,13 @@ select {
 .search-form{
   padding: 30px;
   margin: 10px auto;
-  width: 600px;
+  width: 500px;
   background-color:rgba(73, 69, 73, 0.2);
 }
 
 .search-field{
   width: 400px;
-  margin: 50px;
+  
  flex-direction: column;
  display: flex;
  /* background-color:rgba(73, 69, 73, 0.2); */
