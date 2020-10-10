@@ -24,8 +24,8 @@
       </div>
 
         <div class="t-show-image ts">
-          <% if @tweet.image.attached? %>
-          <%=image_tag @tweet.image.variant(resize: "400x400")%>
+          <% if @tweet.images.attached? %>
+          <%=image_tag @tweet.images[0].variant(resize: "400x400")%>
           <%end%>
         </div>
 

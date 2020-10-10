@@ -17,8 +17,8 @@
         <div class="rank-title"><%=tweet.title%></div>
         
       <div class="rank-image">
-        <% if tweet.image.attached?%>
-        <%=image_tag tweet.image.variant(resize: "200x200")%>
+        <% if tweet.images.attached?%>
+        <%=image_tag tweet.images[0].variant(resize: "200x200")%>
         <%end%>
         </div>
 
