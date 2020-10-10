@@ -101,8 +101,8 @@
      <li class="petlist"> 
       <%= link_to tweet_path(tweet.id) do %>
       <div class="pet-image-content">
-        <%if tweet.image.attached?%>
-        <%= image_tag tweet.image.variant(resize: "200x200"), class:"pet-image" %>
+        <%if tweet.images.attached?%>
+        <%= image_tag tweet.images[0].variant(resize: "200x200"), class:"pet-image" %>
         <%end%>
       </div>
       

@@ -1,7 +1,7 @@
 class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments
-  has_one_attached :image
+  has_many_attached :images
   has_many :tweet_tag_relations
   has_many :tweet_tags, through: :tweet_tag_relations
 

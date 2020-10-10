@@ -111,8 +111,8 @@
      <li class="detail-tweet">
         <%= link_to tweet_path(tweet.id) do %>
        <div class="detail-image">
-          <%if tweet.image.attached?%>
-          <%= image_tag tweet.image.variant(resize: "300x300")%>
+          <%if tweet.images.attached?%>
+          <%= image_tag tweet.images[0].variant(resize: "300x300")%>
           <%end%>
        </div>
 
