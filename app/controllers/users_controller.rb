@@ -55,6 +55,11 @@ class UsersController < ApplicationController
     end
   
     def following
+      
+      @user = User.find(params[:id])
+      @pets=@user.pets
+      @followings = @user.followings
+      
     end
   
   
