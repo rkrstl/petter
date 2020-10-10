@@ -25,14 +25,23 @@
          </div>
          <% end %>
          <%= render partial:'relationships/follow_button', locals:{user: @user} %>
-    
+      
+      <%=link_to  following_user_path do%>
       <div class="following-count">
          フォロー  <%= @follow_count %>
        </div>
+       <%end%>
         
+        <%= link_to follower_user_path do%>
        <div class="follower-count">
        フォロワー<%= @follwer_count%>
        </div>
+
+      
+       <%end%>
+
+
+
       <div class="detail-text-title">自己紹介</div>
       <%if @user.introduction !=nil%>
        <div class="detail-text"><%=@user.introduction%></div>

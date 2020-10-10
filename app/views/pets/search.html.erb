@@ -15,19 +15,26 @@
         <%=f.label :pet_name_cont,"名前で検索"%>
         <%=f.search_field :pet_name_cont%>
         </div>
-        <div class="search-field">
-        <%= f.label :bleed_id_eq, '種類の選択' %>
-        <%= f.collection_select :bleed_id_eq, Bleed.all, :id, :name, include_blank: '指定なし'%>
-        </div>
 
         <div class="search-field">
         <%= f.label :animal_type_id_eq,'動物の種類'%>
         <%= f.collection_select :animal_type_id_eq, AnimalType.all, :id, :name, include_blank: '指定なし'%>
         </div>
 
-
-        <%= f.submit "検索",class:"submit" %>
+        <div class="search-field">
+        <%= f.label :bleed_id_eq, '猫の種類で検索' %>
+        <%= f.collection_select :bleed_id_eq, Bleed.all, :id, :name, include_blank: '指定なし'%>
+        </div>
         
+
+        <div class="search-field">
+        <%= f.label :dog_bleed_id_eq, 'イヌの種類で検索' %>
+        <%= f.collection_select :dog_bleed_id_eq, DogBleed.all, :id, :name, include_blank: '指定なし'%>
+        </div>
+
+        <div class="search-field">
+        <%= f.submit "検索",class:"search-btn" %>
+        </div>
      <%end%>
     </div>
 
@@ -50,9 +57,12 @@
       </div>
 
       <div class="lists-pets-detail">
+        
+        <div class="lists-pet-name"><%=link_to pet.pet_name,detail_user_path(pet.user)%></div>
+        <div class="lists-pet-type"><%= pet.animal_type.name %></div>
+        <div class=><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
+      
         <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
-        <div><i class="fas fa-cat"></i> pet name: <%= pet.pet_name%></div>
-        <div><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
      </div>
 
     </div>
@@ -64,7 +74,7 @@
 </div>
 
 </div>
-<>
+
 
 
 

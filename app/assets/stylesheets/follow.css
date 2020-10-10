@@ -1,0 +1,42 @@
+
+
+
+.follower-all{
+  overflow: scroll;
+  height: 100vh;
+
+}
+
+
+.follower-main-title{
+  font-size: 20px;
+  border-bottom: dimgray 1.5px dotted;
+  width: 400px;
+  margin:100px 5%  1px 5% ;
+
+}
+
+.follower-list{
+  margin:5%;
+  width: 400px;
+  height: 200px;
+}
+
+.follower-individual{
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 800px;
+  height:170px ;
+ 
+  border: 1px solid dimgray;
+ 
+  padding:10px;
+}
+
+.follower-detail{
+  padding: 20px;
+}
+
+.follower-name{
+  font-size: 20px;
+  color: whitesmoke;
+}

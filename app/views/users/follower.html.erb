@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+
+<div class="follower-all">
+
+
+<div class="follower-main-title">
+ <i class="fas fa-users"></i>  <%=@user.nickname%>さんのフォロワー一覧
+</div>
+
+  <div class="follower-list">
+    <% @followers.each do |f|%>
+      <div class="follower-individual">
+
+        <div class="lists-image">
+          <% if f.image.attached?%>
+          <%=image_tag f.image, class:"lists-icon"%>
+          <%else%>
+          <%=image_tag 'default.jpg',size: '100x100', class:"lists-icon" %>
+          <%end%>
+        </div>
+       
+        <div class="follower-detail">
+            <div class="follower-name">
+            <i class="fas fa-user"></i> <%= link_to f.nickname,detail_user_path(f)%>
+            </div>
+            <div class="follower-pet-name">
+            <i class="fas fa-cat"></i> pet name: <%=@pets.first.pet_name%>
+            </div>
+            <% if f.introduction.present?%>
+            <div class="follower-introduction">
+            <i class="far fa-sticky-note"></i> introduction :<%=f.introduction%>
+            </div>
+            <%else%>
+            <div class="follower-introduction">
+            <i class="far fa-sticky-note"></i> introduction :まだ登録されていません
+            </div>
+            <%end%>
+        </div>
+
+        
+
+      </div>
+    <%end%>
+  </div>
+
+
+
+</div>

@@ -16,7 +16,7 @@
 .plan-calendar{
   margin: 3%;
   /* background-color: rgb(173, 172, 172); */
-  width: 800px;
+  width: 90%;
 }
 
 .plan-text{
@@ -58,7 +58,16 @@
 }
 
 .far{
+  color: dimgray;
+}
+
+.far:hover{
   color: black;
+}
+
+
+.fas:hover{
+  color:black;
 }
 
 .calendar-heading{

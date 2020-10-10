@@ -73,9 +73,15 @@ body{
   
 }
 
+
+
 .t-show-likes:hover{
   background-color: indianred;
 
+}
+
+.fa-heart{
+  color: indianred;
 }
 
 

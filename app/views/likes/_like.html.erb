@@ -1,13 +1,13 @@
 <% if user_signed_in? %>
   <% if tweet.like_user(current_user.id) %>
     <%= link_to tweet_like_path(tweet.likes,tweet_id: tweet.id), method: :delete,  remote: true do %>
-      <div>いいねを外す<%= tweet.likes_count %></div>
+      <div class="likes-checked">いいねを外す<i class="fas fa-heart">  </i><%= tweet.likes_count %></div>
      
         
     <% end %>
   <% else %>
     <%= link_to tweet_likes_path(tweet.id), method: :post ,remote: true do %>
-      <div>いいね<%= tweet.likes_count %></div>
+      <div>いいね<i class="far fa-heart"></i>  <%= tweet.likes_count %></div>
      
     <% end %>
   <% end %>

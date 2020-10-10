@@ -6,6 +6,11 @@
   overflow: scroll;
 }
 
+.rank-heading{
+ margin: 40px;
+ font-size: 20px;
+}
+
 .rank-individual{
   margin: 20px 0 0 0;
 }
@@ -15,20 +20,28 @@
   color: rgb(59, 39, 39);
   width: 600px;
   height: 800px;
-  
   text-align: center;
   padding: 30px;
+}
+
+.rank-title{
+  margin: 20px;
 }
 
 
 .rank-tag-all{
   margin: 0 0 30px 0;
-  padding: 50px;
+  padding: 30px;
+  color: rgb(59, 39, 39);
   width: 600px;
   height: 800px;
-  
   text-align: center;
+ 
 
+}
+
+.rank-tag-individual{
+  margin: 20px 0 0 0;
 }
 
 .rank-main-title{
@@ -38,18 +51,36 @@
   margin: 100px 5% 1px 5%;
 }
 
+.rank-title{
+  margin: 10px;
+  font-size: 20px;
+}
 .rank-nickname{
+
   font-size: 15px;
 
 }
 
+.fa-crown{
+  color: rgb(230, 212, 51);
+}
+
+
 
 
 .rank-num{
+  color: whitesmoke;
   border-bottom: 2px dotted gray;
   margin: auto;
   font-size: large;
+  color: aliceblue;
 }
+
+.rank-tag-individual{
+margin: 20px;
+
+}
+
 
 .rank-tag-num{
   color: aliceblue;
@@ -57,3 +88,15 @@
   margin: auto;
   font-size: large;
 }
+
+.rank-tag{
+  font-size: 25px;
+  margin: 20px;
+}
+.rank-heading{
+  
+  font-size: 20px;
+}
+
+.fa-crown{
+  color: khaki;
