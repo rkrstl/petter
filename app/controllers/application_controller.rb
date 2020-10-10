@@ -4,9 +4,10 @@ class ApplicationController < ActionController::Base
 
 
     def search
-      @animal_type = Pet.select("animal_type").distinct
+      
       @search= Pet.ransack(params[:q])
       @pets=@search.result
+      
     end
 
 

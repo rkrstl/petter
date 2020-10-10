@@ -57,7 +57,8 @@ ActiveRecord::Schema.define(version: 2020_10_08_065532) do
     t.date "birth", null: false
     t.integer "gender_id", null: false
     t.text "personality"
-    t.string "animal_type"
+    t.integer "animal_type_id"
+    t.integer "dog_bleed_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_pets_on_user_id"

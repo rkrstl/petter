@@ -62,3 +62,18 @@
   
   padding: 20px;
 }
+
+.lists-pet-type{
+  font-size: 5pxx;
+}
+
+
+.pet-main-title{
+  font-size: 20px;
+  border-bottom: dimgray 1.5px dotted;
+  width: 400px;
+  margin: 10px;
+ flex-direction: column;
+ display: flex;
+
+}

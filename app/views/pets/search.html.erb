@@ -21,8 +21,8 @@
         </div>
 
         <div class="search-field">
-        <%= f.label :animal_type_eq,'動物の種類'%>
-        <%= f.collection_select :animal_type_eq, @animal_type, :animal_type, :animal_type, include_blank: '指定なし'%>
+        <%= f.label :animal_type_id_eq,'動物の種類'%>
+        <%= f.collection_select :animal_type_id_eq, AnimalType.all, :id, :name, include_blank: '指定なし'%>
         </div>
 
 

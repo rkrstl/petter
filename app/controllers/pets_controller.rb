@@ -39,7 +39,7 @@ class PetsController < ApplicationController
   private
 
    def pet_params
-    params.require(:pet).permit(:image,:pet_name,:bleed_id,:birth,:personality,:gender_id,:animal_type).merge(user_id:current_user.id)
+    params.require(:pet).permit(:image,:pet_name,:bleed_id,:birth,:personality,:gender_id,:animal_type_id,:dog_bleed_id).merge(user_id:current_user.id)
    end
 
 

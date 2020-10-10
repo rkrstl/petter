@@ -7,41 +7,35 @@
 
 <div class="pet-form">
 
+ <div class="pet-main-title">ペットの登録</div>
 
   <%= form_with(model: @pet,local: true) do |f| %>
 
+ <div class="field">
+     <label>ペットのおなまえ</label>
+    <%= f.text_field :pet_name, class:"pet_name", placeholder:"にゃーにゃん", maxlength:"20" %>
+     </div>
  
   <div class="field">
   <label>ペットの画像</label>
    <%= f.file_field :image %>
  </div>
 
-     <div class="field">
-     <label>ペットのおなまえ</label>
-    <%= f.text_field :pet_name, class:"pet_name", placeholder:"にゃーにゃん", maxlength:"20" %>
-     </div>
-     
-     <div >
-     <p>
-      イヌ<%= f.radio_button :animal_type,:"イヌ"%>
-     
-     </p>
-     <p>
-      ネコ<%= f.radio_button :animal_type,:"ネコ"%>
-     
-     </p>
-
-     <p>
-      その他<%= f.radio_button :animal_type,:"その他"%>
-     
-     </p>
-     </div>
+    <div class="field">
+     <label>動物の種類</label>
+     <%= f.collection_select(:animal_type_id, AnimalType.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+      </div>
 
      
 
      <div class="field">
      <label>ネコの種類</label>
      <%= f.collection_select(:bleed_id, Bleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+      </div>
+    
+     <div class="field">
+     <label>イヌの種類</label>
+     <%= f.collection_select(:dog_bleed_id, DogBleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
       </div>
 
     <div class="field">
