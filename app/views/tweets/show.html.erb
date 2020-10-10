@@ -42,20 +42,22 @@
         
         <div>
         <%@tweet.tweet_tags.each do |tag| %>
-            <%=tag.name%>
+            #<%=tag.name%>
         <%end%>
         </div>
 
    </div>
-  
-  
 
   
+
+
     <div class="t-show-comments ts">
     <div id="like-<%= @tweet.id %>", class="t-show-likes">
      <%= render partial: 'likes/like',locals: { tweet: @tweet }%>
     </div>
    </div>
+
+    
 
     <div class="t-show-comments ts">
       <%= form_with(model: [@tweet, @comment]) do |f| %>

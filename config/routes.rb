@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
  root to: "tweets#index" 
  resources :plans
- resources :relationships,only: [:create, :destroy]
+ resources :relationships,only: [:create, :destroy] 
  resources :pets do
    collection do
     get 'search'
@@ -18,7 +18,12 @@ Rails.application.routes.draw do
  end
 
  resources :users do
-  
+  member do
+    get 'following'
+  end
+  member do
+    get 'follower'
+  end
   member do
     get 'mypage'
   end
