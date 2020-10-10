@@ -98,11 +98,13 @@
   <div class="pets">
 
   <div class="lists-title">みんなの投稿</div>
+  <% if @tweets.present?%>
   <div class="tweet-lists">
     <% @tweets.each do |tweet| %>
 
      <li class="petlist"> 
       <%= link_to tweet_path(tweet.id) do %>
+      
       <div class="pet-image-content">
         <%if tweet.images.attached?%>
         <%= image_tag tweet.images[0].variant(resize: "200x200"), class:"pet-image" %>
@@ -119,6 +121,8 @@
       </div>
     </li>
     <%end%>
+    <%end%>
+
     <%end%>
     </div>
 
