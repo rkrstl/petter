@@ -9,7 +9,7 @@
   
    
     <div class="rank-tweet">
-       <div>ツイートのいいねランキング</div>
+       <div class="rank-heading">ツイートのいいねランキング</div>
       <% @all_ranks.each.with_index(1) do |tweet,i|%>
        <div class="rank-individual">
         <%= link_to tweet_path(tweet.id) do %>
@@ -30,10 +30,12 @@
 
     
       <div class="rank-tag-all">
-      <div>人気タグランキング</div>
+      <div class="rank-heading">人気タグランキング</div>
         <% @tag_lanks.each.with_index(1) do |tag,i| %>
-          <div class="rank-tag-num">第<%= i %>位 </div> 
-          <div class="rank-tag"><%= tag.name%></div>
+        <div class="rank-tag-individual">
+          <div class="rank-num">第<%= i %>位 </div> 
+          <div class="rank-tag">#<%= tag.name%></div>
+          </div>
         <%end%>
       </div>
 
