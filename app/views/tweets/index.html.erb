@@ -51,7 +51,7 @@
        <%end%>
 
        <%else%>
-        <%=link_to 'ペットを登録',new_user_session_path%>
+        <%=link_to 'ペットを登録',new_user_session_path%><i class="fas fa-cat"></i>
        <%end%>
 
       </p>
@@ -99,29 +99,31 @@
 
   <div class="lists-title">みんなの投稿</div>
   <% if @tweets.present?%>
+
   <div class="tweet-lists">
     <% @tweets.each do |tweet| %>
-
      <li class="petlist"> 
-      <%= link_to tweet_path(tweet.id) do %>
-      
-      <div class="pet-image-content">
-        <%if tweet.images.attached?%>
-        <%= image_tag tweet.images[0].variant(resize: "200x200"), class:"pet-image" %>
-        <%end%>
-      </div>
-      
+        <%= link_to tweet_path(tweet.id) do %>
+          <div class="pet-image-content">
+            <%if tweet.images.attached?%>
+            <%= image_tag tweet.images[0].variant(resize: "200x200"), class:"pet-image" %>
+            <%end%>
+          </div>
+          <div class="tweet-info">
+              <h3 class="tweet-title">
+                <%= tweet.title%>
+                </h3>
+                <div class="tweet-by">by <%=tweet.user.nickname%>さん</div>
+          </div>
+          <%end%>
+       </li>
+       <%end%>
+     
 
-      <div class="tweet-info">
-          <h3 class="tweet-title">
-            <%= tweet.title%>
-            </h3>
-            <div class="tweet-by">by <%=tweet.user.nickname%>さん</div>
-          
-      </div>
-    </li>
-    <%end%>
-    <%end%>
+    <%else%>
+
+     <div class="no-tweets">まだ投稿されていません <i class="fas fa-crow"></i> <i class="fas fa-kiwi-bird"></i> <i class="fas fa-crow"> <i class="fas fa-kiwi-bird"></i></i></div>
+    
 
     <%end%>
     </div>

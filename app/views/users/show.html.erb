@@ -44,29 +44,34 @@
 
 
   <div class="user-edit u">
-    <%=link_to 'ユーザー情報の編集',edit_user_path %>
+    <i class="far fa-edit"></i> <%=link_to 'ユーザー情報の編集',edit_user_path %>
   </div>
 
   <div class="user-like u">
-    <%=link_to 'いいねした投稿',likes_user_path%>
+    <i class="fas fa-heart"></i> <%=link_to 'いいねした投稿',likes_user_path%>
   </div>
 
    <div class="user-tweet u">
-    <%=link_to '投稿したtweet',mypage_user_path %>
+    <i class="far fa-sticky-note"></i> <%=link_to '投稿したtweet',mypage_user_path %>
   </div>
 
   <% if current_user.pets.present?%>
-  <div class="user-follow u">
-    <%=link_to'登録したペット',pet_path(@user.pets.first)%>
-  </div>
-<%end%>
+    <div class="user-follow u">
+      <i class="fas fa-dog"></i> <%=link_to'ペットの編集',pet_path(@user.pets.first)%>
+    </div>
+  <%else%> 
+    <div class="user-follow u">
+      <i class="fas fa-dog"></i> <%=link_to'ペットの登録',new_pet_path%>
+    </div>
+
+  <%end%>
 
   <div class="user-allsee u">
-    <%=link_to 'あなたのページ',detail_user_path(@user)%>
+   <i class="far fa-paper-plane"></i> <%=link_to 'あなたのページ',detail_user_path(@user)%>
   </div>
 
  <div class="user-calendar u">
-    <%=link_to 'カレンダー',plans_path%>
+   <i class="far fa-calendar-alt"></i>  <%=link_to 'カレンダー',plans_path%>
   </div>
 
 </div>
