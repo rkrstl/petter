@@ -1,31 +1,35 @@
 <%= render "shared/header" %>
 
+<div class="mytweet-all">
 
-<div class="likes-currentuser-nickname">
-<%=@user.nickname%>さんのマイページ
+<div class="mytweet-currentuser-nickname">
+<i class="far fa-file"></i> <%=@user.nickname%>さんのマイページ
 <div class="return">
-<%= link_to 'もどる',edit_user_path(current_user) %>
+<%= link_to 'もどる',user_path(current_user) %>
 </div>
 </div>
 
 
 
-<div class="like-all">
+
   <% current_user.tweets.each do |tweet |%>
-   <div class="likes-tweets">
-     <%= link_to tweet_path(tweet.id) do %>
+   <div class="mytweet-tweets">
      
-        <div class="likes-title">
-          <%= tweet.title%>
+     <%= link_to tweet_path(tweet.id) do %>
+      <%if tweet.images.attached?%>
+          <div class="mytweet-image">
+          <%= image_tag tweet.images[0].variant(resize: "200x200"),class:"mytweet-icon"%>
+          </div>
+        <%end%>
+          <div class="mytweet-detail">
+            <div class="mytweet-title">
+              <%= tweet.title%>
+            </div>
+            <div class="mytweet-text">
+             <%=tweet.text%>
+            </div>
         </div>
-   
-      
-      <%if tweet.image.attached?%>
-      <div class="likes-image"><%= image_tag tweet.image.variant(resize: "200x200")%></div>
-      <%end%>
 
-     <div class="likes-nickname">By <%=tweet.user.nickname%></div>
-      
      <%end%>
    </div> 
     <%end%>

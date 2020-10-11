@@ -21,8 +21,6 @@ body{
 .show-content{
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.2);
- 
-
 }
 
 
@@ -117,4 +115,23 @@ body{
 .t-show-real-text{
   margin: auto;
   text-align: center;
+}
+
+
+.t-show-current_user{
+  margin: 20px auto;
+  width: 300px;
+ 
+}
+
+.t-show-edit{
+  background-color: rgb(137, 226, 149);
+  padding: 10px;
+  margin: 10px;
+}
+
+.t-show-destroy{
+  background-color: rgb(123, 160, 228);
+  padding: 10px;
+  margin: 10px;
 }

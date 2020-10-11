@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   def index
     plan
-    @tweets=Tweet.all
+    @tweets=Tweet.all.order("tweets.created_at DESC")
     @pets =Pet.all
   end
 

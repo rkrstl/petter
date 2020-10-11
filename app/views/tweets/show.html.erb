@@ -47,7 +47,8 @@
         </div>
    </div>
 
-    <%# あ %>
+    <% if user_signed_in? && current_user.id == @tweet.user_id %>
+    <div class="t-show-current_user">
     <div class="t-show-edit">
      <%=link_to '編集', edit_tweet_path(@tweet.id),method: :get %>
     </div>
@@ -55,6 +56,8 @@
     <div class="t-show-destroy">
      <%=link_to '削除',tweet_path(@tweet.id),method: :delete %>
     </div>
+    </div>
+    <%end%>
 
     <%# aaaa %>
 

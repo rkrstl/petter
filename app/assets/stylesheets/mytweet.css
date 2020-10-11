@@ -1,0 +1,40 @@
+
+.mytweet-all{
+  height: 100vh;
+}
+
+.mytweet-currentuser-nickname{
+  font-size: 20px;
+  border-bottom: dimgray 1.5px dotted;
+  width: 400px;
+  margin: 30px;
+ 
+}
+
+.mytweet-tweets{
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 500px;
+  height:400px ;
+ 
+  border: 1px solid dimgray;
+ 
+  padding:10px;
+  margin: 30px;
+  
+}
+
+.mytweet-image{
+  text-align: center;
+  margin: 20px;
+
+}
+
+.mytweet-detail{
+  text-align: center;
+}
+
+.mytweet-title{
+  margin: 5px;
+  font-size: 25px;
+}
+
