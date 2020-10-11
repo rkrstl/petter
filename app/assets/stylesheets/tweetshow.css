@@ -130,8 +130,16 @@ body{
   margin: 10px;
 }
 
+.t-show-edit:hover{
+  background-color: rgb(62, 172, 76);
+}
+
 .t-show-destroy{
   background-color: rgb(123, 160, 228);
   padding: 10px;
   margin: 10px;
+}
+
+.t-show-destroy:hover{
+  background-color: rgb(67, 116, 206);
 }
