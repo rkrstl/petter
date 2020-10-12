@@ -12,6 +12,12 @@ extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :animal_type
   
 
-validates :bleed_id,presence: true
-validates :personality,presence: true
+
+  with_options presence: true do
+    validates :pet_name
+    validates :personality
+    validates :birth
+    validates :animal_type_id
+  end
+
 end

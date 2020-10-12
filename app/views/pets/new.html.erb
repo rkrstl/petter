@@ -9,7 +9,11 @@
 
  <div class="pet-main-title">ペットの登録</div>
 
+ 
+
   <%= form_with(model: @pet,local: true) do |f| %>
+
+<%= render 'shared/error_messages', model: f.object %>
 
  <div class="field">
      <label>ペットのおなまえ</label>

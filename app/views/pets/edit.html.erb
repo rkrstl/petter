@@ -8,6 +8,10 @@
 
 <div class="pet-form">
   <%= form_with(model: @pet,local: true) do |f| %>
+  
+  <%= f.file_field :image, class:"pl e" %>
+
+
 
   <div class="pet_image">
 <%= f.file_field :image, class:"pl e" %>

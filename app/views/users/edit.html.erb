@@ -6,15 +6,17 @@
 
 <div class="edit-contents">
 <%= form_with  model:@user,local:true do |user|%>
+  
 
- <div class="edit-title ">
+  
+  <div class="edit-title ">
    ユーザー情報の編集
- </div>
+  </div>
 
- <div class='edit-text-wrap e'>
+  <div class='edit-text-wrap e'>
       <label class="form-text">ニックネーム</label>
       <%# <span class="indispensable">必須</span> %>
-    <%= user.text_field :nickname, class:"input-default pl", id:"nickname", placeholder:"ワンコニャンコ", maxlength:"30" %>
+     <%= user.text_field :nickname, class:"input-default pl", id:"nickname", placeholder:"ワンコニャンコ", maxlength:"30" %>
   </div>
 
   
