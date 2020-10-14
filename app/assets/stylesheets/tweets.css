@@ -1,0 +1,9 @@
+.top-wrapper {
+  padding: 150px;
+  height: 600px;
+  background-image: image-url("cat.jpg");
+  background-size: cover;
+  background-color: rgba(73, 69, 69, 0.6);
+  background-blend-mode: lighten;
+}
+/*# sourceMappingURL=tweets.css.map */

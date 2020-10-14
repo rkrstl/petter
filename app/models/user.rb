@@ -41,7 +41,7 @@ VALID_PASSWORD_REGEX =/\A[a-zA-Z0-9]+\z/
 validates :password, presence: true, length: { minimum: 6 }, format: { with: VALID_PASSWORD_REGEX }, on: :create
 
 
-validates :nickname, presence: true
+validates :nickname, presence: true, length: { maximum: 6 }
 
 validates :birth,presence:true
 
