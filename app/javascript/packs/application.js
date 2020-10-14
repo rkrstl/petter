@@ -38,4 +38,6 @@ $(document).on('click', '.plan_modal_wrapper, .fa-times-circle', function() {
 })
 
 
+
+
 $('.t-show-image').slick();

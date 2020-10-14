@@ -26,9 +26,9 @@
         <div class="t-show-image ts">
           <% if @tweet.images.attached? %>
           <% @tweet.images.each  do |image|%>
-              
-                  <%=image_tag image.variant(resize: "400x400"),class:"image-slide"%>
-              
+               <ul class="t-show-image">.
+                  <li><%=image_tag image.variant(resize: "400x400"),class:"image-slide"%></li>
+              </ul>
          <%end%>
          </div>
           <%end%>
