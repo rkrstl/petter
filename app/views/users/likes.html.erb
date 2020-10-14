@@ -20,8 +20,8 @@
 
    <div class="likes-title"><%=tweet.title%></div>
 
-   <%if tweet.image.attached?%>
-   <div class="likes-image"><%=image_tag tweet.image.variant(resize: "200x200")%></div>
+   <%if tweet.images.attached?%>
+   <div class="likes-image"><%=image_tag tweet.images[0].variant(resize: "200x200")%></div>
    <%end%>
 
    <div class="likes-nickname">By <%=tweet.user.nickname%></div>
