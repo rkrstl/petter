@@ -143,3 +143,8 @@ body{
 .t-show-destroy:hover{
   background-color: rgb(67, 116, 206);
 }
+
+
+.slick-slide img{
+  display: inline-block !important; 
+}

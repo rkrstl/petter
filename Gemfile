@@ -60,6 +60,5 @@ gem 'simple_calendar', '~> 2.0'
 gem 'active_hash'
 gem 'ransack'
 gem 'simple_calendar', '~> 2.0'
-
 gem "aws-sdk-s3", require: false
 
