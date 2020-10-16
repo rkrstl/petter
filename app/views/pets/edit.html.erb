@@ -26,19 +26,19 @@
 
     <div class="field">
      <label>動物の種類</label>
-     <%= f.collection_select(:animal_type_id, AnimalType.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+     <%= f.collection_select(:animal_type_id, AnimalType.all, :id, :name, {:include_blank => true}, {class:"bleed-select"}) %>
       </div>
 
      
 
      <div class="field">
      <label>ネコの種類</label>
-     <%= f.collection_select(:bleed_id, Bleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+     <%= f.collection_select(:bleed_id, Bleed.all, :id, :name, {:include_blank => true}, {class:"bleed-select"}) %>
       </div>
     
      <div class="field">
      <label>イヌの種類</label>
-     <%= f.collection_select(:dog_bleed_id, DogBleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+     <%= f.collection_select(:dog_bleed_id, DogBleed.all, :id, :name,{:include_blank => true}, {class:"bleed-select"}) %>
       </div>
 
     <div class="field">

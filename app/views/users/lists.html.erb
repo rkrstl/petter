@@ -21,7 +21,13 @@
         
         <div class="lists-pet-name"><%=link_to pet.pet_name,detail_user_path(pet.user)%></div>
         <div class="lists-pet-type"><%= pet.animal_type.name %></div>
-        <div class=><i class="fas fa-apple-alt"></i> bleed : <%= pet.bleed.name%></div>
+          <div class=><i class="fas fa-apple-alt"></i> bleed :
+          <%if pet.bleed.present?%>
+           <%= pet.bleed.name%>
+           <%else%>
+           <%=pet.dog_bleed.name%>
+           <%end%>
+          </div>
         <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
      </div>
 

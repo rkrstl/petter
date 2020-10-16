@@ -76,7 +76,11 @@
 
         <div class="detail-pet-bleed p">
           <div class="pet-label">種類</div>
-          <%=@pet.bleed.name%>
+          <%if @pet.bleed.present?%>
+           <%= @pet.bleed.name%>
+           <%else%>
+           <%=@pet.dog_bleed.name%>
+           <%end%>
         </div>
     
       

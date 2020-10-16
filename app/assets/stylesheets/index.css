@@ -40,8 +40,9 @@ h1 {
   position: fixed;
   top: 0;
   display: flex;
-   align-items: center;
-   height:70px;
+  align-items: center;
+  height:70px;
+  z-index: 100;
  
 }
 
@@ -143,19 +144,11 @@ nav{
 }
 
 
-
-
 .tweet3{
   
   float: left;
   width: 15%;
 }
-
-
-
-
-
-
 
 
 .menu li li {
