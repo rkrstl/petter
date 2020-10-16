@@ -1,32 +1,44 @@
 <%= render "shared/header" %>
 
-
 <div class="pet-all">
 
 
 
-
 <div class="pet-form">
+
+ <div class="pet-main-title">ペットの登録</div>
+
+ 
+
   <%= form_with(model: @pet,local: true) do |f| %>
-  
-  <%= f.file_field :image, class:"pl e" %>
 
+<%= render 'shared/error_messages', model: f.object %>
 
-
-  <div class="pet_image">
-<%= f.file_field :image, class:"pl e" %>
- </div>
-
-     <div class="field">
-     <label>ネコのおなまえ</label>
+ <div class="field">
+     <label>ペットのおなまえ</label>
     <%= f.text_field :pet_name, class:"pet_name", placeholder:"にゃーにゃん", maxlength:"20" %>
      </div>
-     
+ 
+  <div class="field">
+  <label>ペットの画像</label>
+   <%= f.file_field :image %>
+ </div>
 
+    <div class="field">
+     <label>動物の種類</label>
+     <%= f.collection_select(:animal_type_id, AnimalType.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+      </div>
+
+     
 
      <div class="field">
      <label>ネコの種類</label>
      <%= f.collection_select(:bleed_id, Bleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
+      </div>
+    
+     <div class="field">
+     <label>イヌの種類</label>
+     <%= f.collection_select(:dog_bleed_id, DogBleed.all, :id, :name, {prompt: "---"}, {class:"bleed-select"}) %>
       </div>
 
     <div class="field">
@@ -34,6 +46,8 @@
          <%= f.collection_select(:gender_id, Gender.all, :id, :name, {prompt: "---"}, {class:"gender-select"}) %>
     </div>
     
+
+
 
 
      <div class='field'>
@@ -58,15 +72,22 @@
 
      <div class="field">
      <label>コメント（性格など）</label>
-      <%=f.text_area :personality,class:"pet_personal",placeholder:"大人しい性格です。よく寝ます。",row:"8"%>
+      <%=f.text_area :personality,class:"pet_personal",placeholder:"大人しい性格です。",maxlength:"10"%>
     </div>
 
 
 
     <div class="field">
-    <%= f.submit "登録",class:"submit" %>
+    <%= f.submit "編集",class:"submit" %>
   </div>
 
   <%end%>
+ 
+ </div>
+
 </div>
+
+
+
+
 
