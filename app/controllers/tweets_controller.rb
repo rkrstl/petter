@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index,except:[:index ,:search]
+  before_action :move_to_index,except:[:index ,:search,:lank]
 
   def index
     plan
