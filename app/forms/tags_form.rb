@@ -7,7 +7,6 @@ class TagsForm
     validates :images
     validates  :title
     validates :text
-    validates :name
   end
 
   def save
