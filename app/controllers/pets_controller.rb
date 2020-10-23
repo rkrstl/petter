@@ -17,8 +17,13 @@ class PetsController < ApplicationController
 
   def show
     @pet=Pet.find(params[:id])
+  end
+
+
+  def search
     
   end
+
 
   def edit
     @pet = Pet.find(params[:id])
