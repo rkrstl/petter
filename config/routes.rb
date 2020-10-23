@@ -8,6 +8,9 @@ Rails.application.routes.draw do
    collection do
     get 'search'
    end
+   collection do
+    get 'animal'
+   end
   end
  resources :tweets do
    resources :likes,only: [:create, :destroy]

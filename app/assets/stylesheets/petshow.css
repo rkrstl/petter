@@ -1,0 +1,26 @@
+
+
+
+
+
+.pet-show-all{
+  
+  height: 100vh;
+  text-align: center;
+}
+
+.pet-info{
+
+  font-size: 20px;
+  margin: 30px;
+}
+
+.edit-pet{
+  margin: 5%;
+  border-radius: 4%;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  
+}

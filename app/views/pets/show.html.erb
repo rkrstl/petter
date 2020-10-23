@@ -1,7 +1,11 @@
 <%= render "shared/header" %>
 
+<div class="pet-show-all">
 
+
+<div class="edit-pet">
 <%=link_to '編集 ',edit_pet_path(@pet.id), method: :get%>
+</div>
 
 <div class="pet-info">
 あなたが登録したペット
@@ -9,7 +13,7 @@
 
 <div class="your-pet-image">
 <%if @pet.image.attached?%>
-<%= image_tag @pet.image.variant(resize:"100x100")%>
+<%= image_tag @pet.image.variant(resize:"200x200")%>
 <%end%>
 </div>
 
@@ -25,5 +29,13 @@
 
 <label> 種類 </label>
 <div>
-<%=@pet.bleed.name%>
+<%if @pet.bleed.present?%>
+           <%= @pet.bleed.name%>
+           <%else%>
+           <%=@pet.dog_bleed.name%>
+           <%end%>
 </div>
+
+</div>
+
+<%= render "shared/footer" %>
