@@ -20,10 +20,6 @@ class PetsController < ApplicationController
   end
 
 
-  def search
-    
-  end
-
 
   def edit
     @pet = Pet.find(params[:id])
@@ -38,6 +34,9 @@ class PetsController < ApplicationController
   end
  end
 
+ def animal
+ 
+ end
 
 
 
