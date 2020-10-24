@@ -100,6 +100,7 @@ nav{
 }
 
 .title{
+  font-size: 20px;
   padding: 15px;
   margin: 30px;
 }
@@ -259,10 +260,14 @@ nav{
     box-shadow: 0 0 5px 1px #ccc;
     padding: 20px;
     width: 300px;
-    margin: 20px auto;
+    margin: auto;
     text-align: center;
     color: darkgray;
 
+}
+
+.animal_type_detail:hover{
+  background-color: darkgray;
 }
 
 .animal_type_detail a{
@@ -270,6 +275,7 @@ nav{
 }
 
 .animal_search_title{
+  font-size: 20px;
   margin: 30px;
   text-align: center;
 }

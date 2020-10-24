@@ -23,9 +23,9 @@
             <div class="follower-name">
             <i class="fas fa-user"></i> <%= link_to f.nickname,detail_user_path(f)%>
             </div>
-            <%if @pets.present?%>
+            <%if f.pets.present?%>
             <div class="follower-pet-name">
-            <i class="fas fa-cat"></i> pet name: <%=@pets.first.pet_name%>
+            <i class="fas fa-cat"></i> pet name: <%=f.pets[0].pet_name%>
             </div>
             <%else%>
             <i class="fas fa-cat"></i> pet name: まだ登録されていません
