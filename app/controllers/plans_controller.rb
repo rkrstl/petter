@@ -2,9 +2,7 @@ class PlansController < ApplicationController
 
 
   def index
- 
     @plans = current_user.plans
-    
   end
 
   def new
@@ -50,8 +48,7 @@ class PlansController < ApplicationController
 
 
   def show
-    @plan=Plan.find(params[:id])
-    
+    @plan=Plan.find(params[:id])  
   end
 
 private

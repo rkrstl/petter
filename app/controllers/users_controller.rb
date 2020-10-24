@@ -4,12 +4,10 @@ class UsersController < ApplicationController
   
 
     def show
-      
       @image=@user.image
     end
 
     def edit 
-      
     end
 
     def update
@@ -23,25 +21,20 @@ class UsersController < ApplicationController
 
 
     def mypage
-     
     end
    
     def detail
-      
       @pet=@user.pets.first
       @follow_count = @user.followings.count
       @follwer_count=@user.followers.count
     end
 
     def lists
-
       @pets = Pet.all
       @users=User.all
     end
 
     def likes
-      
-      
       @likes=Like.where(user_id: @user.id)
     end
 
@@ -53,7 +46,7 @@ class UsersController < ApplicationController
   
     def following
       @followings = @user.followings
-      end
+    end
   
   
 
@@ -71,7 +64,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:nickname,:email,:image,:introduction)
   end
 
-  def  set_user
+  def set_user
     @user=User.find(params[:id])
   end
   

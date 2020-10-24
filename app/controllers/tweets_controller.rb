@@ -1,5 +1,6 @@
 class TweetsController < ApplicationController
   before_action :move_to_index,except:[:index ,:search,:lank]
+  before_action :set_tweet,only:[:show,:edit,:update]
 
 
   def index
@@ -26,12 +27,9 @@ class TweetsController < ApplicationController
 
 
   def edit
-    @tweet=Tweet.find(params[:id])
-  
   end
 
   def update
-    @tweet=Tweet.find(params[:id])
     if @tweet.update(tweet_params)
       redirect_to plans_path
      else
@@ -50,7 +48,6 @@ class TweetsController < ApplicationController
 
   def show
     @tweets=Tweet.all
-    @tweet=Tweet.find(params[:id])
     @comments = @tweet.comments.includes(:user)
     @comment=Comment.new 
   end
@@ -61,9 +58,9 @@ class TweetsController < ApplicationController
    @tag_lanks = TweetTag.find( TweetTagRelation.group(:tweet_tag_id).order('count(tweet_tag_id)desc').limit(4).pluck(:tweet_tag_id))
  end
 
-  private
-    
 
+private
+    
   def plan
     if user_signed_in?
     @plans = current_user.plans
@@ -80,4 +77,9 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tags_form).permit(:title,:text,:name,images:[]).merge(user_id: current_user.id)
   end
+
+  def set_tweet
+    @tweet=Tweet.find(params[:id])
+  end
+
 end
