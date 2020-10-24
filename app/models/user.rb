@@ -45,7 +45,7 @@ validates :nickname, presence: true, length: { maximum: 6 }
 
 validates :birth,presence:true
 
-validates :email,presence:true,uniqueness: true,format:{with: /\A\S+@\S+\.\S+\z/}
+validates :email,presence:true,uniqueness: true,format:{ with: /\A\S+@\S+\.\S+\z/ }
 
 
 

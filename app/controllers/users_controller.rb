@@ -1,18 +1,19 @@
 class UsersController < ApplicationController
   before_action :move_to_index, only:[:detail]
+  before_action :set_user,only:[:show,:edit,:update,:mypage,:detail,:likes,:follower,:following]
   
 
-  def show
-    @user=User.find(params[:id])
-    @image=@user.image
-  end
+    def show
+      
+      @image=@user.image
+    end
 
-  def edit 
-     @user=User.find(params[:id])
-  end
+    def edit 
+      
+    end
 
     def update
-      @user = User.find(params[:id])
+      
       if @user.update(user_params)
         redirect_to root_path
       else
@@ -22,12 +23,11 @@ class UsersController < ApplicationController
 
 
     def mypage
-      @user = User.find(params[:id])
+     
     end
    
     def detail
       
-      @user = User.find(params[:id])
       @pet=@user.pets.first
       @follow_count = @user.followings.count
       @follwer_count=@user.followers.count
@@ -41,26 +41,19 @@ class UsersController < ApplicationController
 
     def likes
       
-      @user=User.find_by(id:params[:id])
+      
       @likes=Like.where(user_id: @user.id)
     end
 
 
     def follower
-    
-      @user = User.find(params[:id])
       @pet=Pet.find(params[:id])
       @followers = @user.followers
-      
     end
   
     def following
-      
-      @user = User.find(params[:id])
-      
       @followings = @user.followings
-      
-    end
+      end
   
   
 
@@ -76,6 +69,10 @@ class UsersController < ApplicationController
   
   def user_params
     params.require(:user).permit(:nickname,:email,:image,:introduction)
+  end
+
+  def  set_user
+    @user=User.find(params[:id])
   end
   
 

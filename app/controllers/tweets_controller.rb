@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :move_to_index,except:[:index ,:search,:lank]
 
+
   def index
     plan
     @tweets=Tweet.all.order("tweets.created_at DESC")
@@ -34,8 +35,8 @@ class TweetsController < ApplicationController
     if @tweet.update(tweet_params)
       redirect_to plans_path
      else
-    render :edit
-  end
+     render :edit
+    end
   end
 
   def destroy
