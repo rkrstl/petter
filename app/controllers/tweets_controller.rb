@@ -5,6 +5,7 @@ class TweetsController < ApplicationController
     plan
     @tweets=Tweet.all.order("tweets.created_at DESC")
     @pets =Pet.all
+    @animal_types = AnimalType.all
   end
 
   def new

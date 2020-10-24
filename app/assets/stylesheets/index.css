@@ -243,3 +243,33 @@ nav{
   margin-bottom: 5%;
 }
 
+
+
+.animal_type{
+  width: 500px;
+  margin:  auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.animal_type_detail{
+
+   background-color: #ffeee2;
+    box-shadow: 0 0 5px 1px #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    color: darkgray;
+
+}
+
+.animal_type_detail a{
+  color: rgb(83, 78, 78);
+}
+
+.animal_search_title{
+  margin: 30px;
+  text-align: center;
+}
