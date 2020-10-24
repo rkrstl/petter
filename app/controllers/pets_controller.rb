@@ -34,10 +34,6 @@ class PetsController < ApplicationController
   end
  end
 
- def animal
- 
- end
-
 
 
   private

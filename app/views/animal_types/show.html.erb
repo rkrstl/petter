@@ -1,0 +1,41 @@
+<%= render "shared/header" %>
+
+
+
+
+<div class="lists-user">
+
+
+  <% @pets.each do |pet|%>
+    <div class="lists-user-individual">
+
+    <div class="lists-image">
+      <% if pet.image.attached? %>
+        <%=image_tag pet.image, class:"lists-icon"%>
+        <%else%>
+        <%=image_tag 'default.jpg',class:"lists-icon"%>
+      <%end%>
+      </div>
+
+      <div class="lists-pets-detail">
+        
+        <div class="lists-pet-name"><%=link_to pet.pet_name,detail_user_path(pet.user)%></div>
+        <div class="lists-pet-type"><%= pet.animal_type.name %></div>
+          <div class=><i class="fas fa-apple-alt"></i> bleed :
+          <%if pet.bleed.present?%>
+           <%= pet.bleed.name%>
+           <%else%>
+           <%=pet.dog_bleed.name%>
+           <%end%>
+          </div>
+        <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
+     </div>
+
+    </div>
+    <%end%>
+
+</div>
+
+
+</div>
+<%= render "shared/footer" %>

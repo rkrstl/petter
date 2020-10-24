@@ -14,10 +14,24 @@
         <p>ペットの投稿やペットの予定管理ができます</p>
         <p></p>
 
-        <div><%=link_to 'ねこ',animal_pets_path%></div>
+       
     </div>
 
 </div>
+
+
+<div class="animal_search_title"> 
+ 動物の種類から探す<i class="fas fa-search"></i>
+</div>
+
+<div class="animal_type"> 
+      <% @animal_types.each do |animal_type| %>
+      <div class="animal_type_detail">
+      <%= link_to animal_type.name, animal_type_path(id: animal_type.id) %>
+      </div>
+      <% end %>
+</div>
+
 
 
 
