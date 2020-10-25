@@ -17,7 +17,7 @@ select {
   padding: 30px;
   margin: 30px auto;
   width: 500px;
-  background-color:rgba(73, 69, 73, 0.2);
+  /* background-color:rgba(73, 69, 73, 0.2); */
 }
 
 .search-field{
@@ -56,4 +56,67 @@ margin: 100px 5% 1px 5%;
 
 .animal-type-all{
   height: 100vh;
+}
+
+
+
+
+
+.tab-all{
+  padding: 30px;
+  margin: 30px auto;
+  width: 500px;
+  text-align: center;
+}
+.tab-menu {
+  display: flex;
+  margin: 0 -5px;
+}
+
+.tab-menu_animal {
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+
+
+.tab-trigger { 
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  background-color: rgb(240, 240, 240);
+  position: relative;
+}
+
+.tab-trigger.is-active {
+  background-color: rgb(236, 203, 91);
+}
+
+.tab-content {
+  height: 500px;
+  width: 700px;
+  background-color:rgba(73, 69, 73, 0.2);
+  
+}
+.tab-content_animal {
+  box-sizing: border-box;
+  padding: 20px;
+  display: none;
+  text-align: left;
+}
+.tab-content_animal.is-active {
+  display: block;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -1,9 +1,9 @@
 class PetsController < ApplicationController
    before_action :set_pet,only:[:show,:edit,:update]
 
- def new
-   @pet = Pet.new 
- end
+  def new
+    @pet = Pet.new 
+  end
 
 
   def create
@@ -18,8 +18,6 @@ class PetsController < ApplicationController
 
   def show
   end
-
-
 
   def edit
   end

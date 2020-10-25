@@ -6,8 +6,39 @@
   <i class="fas fa-search"></i>ペットを検索
   </div>
 
+<div class="tab-all">
+<ul class="tab-menu">
+  <li class="tab-menu_anumal"><span class="tab-trigger js-tab-trigger is-active" data-id="tab-cat">ネコの種類</span></li>
+  <li class="tab-menu_anumal"><span class="tab-trigger js-tab-trigger" data-id="tab-dog">イヌの種類</span></li>
+  <li class="tab-menu_anumal"><span class="tab-trigger js-tab-trigger" data-id="tab-other">その他の種類</span></li>
+</ul>
 
-    <div class="search-form">
+<div class="tab-content">
+  <div class="tab-content_animal js-tab-target is-active" id="tab-cat">
+    <p>
+      <div class="search-form">
+        <%= search_form_for @search,url: search_pets_path do |f| %>
+
+          <div class="search-field">
+            <%=f.label :pet_name_cont,"名前で検索"%>
+            <%=f.search_field :pet_name_cont%>
+          </div>
+
+          <div class="search-field">
+            <%= f.label :bleed_id_eq, 'ネコの種類で検索' %>
+            <%= f.collection_select :bleed_id_eq, Bleed.all, :id, :name, include_blank: '指定なし'%>
+          </div>
+          
+          <div class="search-field">
+          <%= f.submit "検索",class:"search-btn" %>
+          </div>
+      <%end%>
+      </div>
+    </p>
+  </div>
+  <div class="tab-content_animal js-tab-target" id="tab-dog">
+    <p>
+     <div class="search-form">
 
         <%= search_form_for @search,url: search_pets_path do |f| %>
 
@@ -16,16 +47,6 @@
         <%=f.search_field :pet_name_cont%>
         </div>
 
-        <div class="search-field">
-        <%= f.label :animal_type_id_eq,'動物の種類'%>
-        <%= f.collection_select :animal_type_id_eq, AnimalType.all, :id, :name, include_blank: '指定なし'%>
-        </div>
-
-        <div class="search-field">
-        <%= f.label :bleed_id_eq, '猫の種類で検索' %>
-        <%= f.collection_select :bleed_id_eq, Bleed.all, :id, :name, include_blank: '指定なし'%>
-        </div>
-        
 
         <div class="search-field">
         <%= f.label :dog_bleed_id_eq, 'イヌの種類で検索' %>
@@ -37,6 +58,16 @@
         </div>
      <%end%>
     </div>
+    </p>
+  </div>
+  <div class="tab-content_animal js-tab-target" id="tab-other">
+    <p>
+    
+    </p>
+  </div>
+</div>
+
+</div>
 
 
 <%# ペット一覧 %>
