@@ -16,7 +16,7 @@
 <div class="tab-content">
   <div class="tab-content_animal js-tab-target is-active" id="tab-cat">
     <p>
-      <div class="search-form">
+    <div class="search-form">
         <%= search_form_for @search,url: search_pets_path do |f| %>
 
           <div class="search-field">
@@ -34,8 +34,10 @@
           </div>
       <%end%>
       </div>
+      
     </p>
   </div>
+
   <div class="tab-content_animal js-tab-target" id="tab-dog">
     <p>
      <div class="search-form">
@@ -58,17 +60,18 @@
         </div>
      <%end%>
     </div>
+
     </p>
   </div>
+
   <div class="tab-content_animal js-tab-target" id="tab-other">
     <p>
-    <div class="search-field">
-            <%=f.label :pet_name_cont,"名前で検索"%>
-            <%=f.search_field :pet_name_cont%>
-          </div>
+     準備中
     
     </p>
   </div>
+     
+  
 </div>
 
 </div>
