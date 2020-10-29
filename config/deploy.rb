@@ -39,7 +39,7 @@ namespace :deploy do
     desc "webpacker:compileを実施"
     task :precompile do
       on roles(:all) do
-        execute "rake webpacker:compile RAILS_ENV=production"
+        execute "rails webpacker:compile RAILS_ENV=production"
       end
     end
   end
