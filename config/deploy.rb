@@ -33,15 +33,3 @@ namespace :deploy do
 end
 
 
-
-namespace :deploy do
-  namespace :webpacker do
-    desc "webpacker:compileを実施"
-    task :precompile do
-      on roles(:all) do
-        execute "rails webpacker:compile RAILS_ENV=production"
-      end
-    end
-  end
-end
-after 'deploy:updated', "deploy:webpacker:precompile"
