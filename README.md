@@ -52,7 +52,7 @@ $ rails db:seed
 mail to:choiihwa68@gmail.com
 
 
-## usersテーブル
+# usersテーブル
 
 |Column          |Type    | Options     |
 |----------------|--------|-------------|
@@ -63,7 +63,7 @@ mail to:choiihwa68@gmail.com
 |introduction    | text   |null:false   |        
 
 
-# Association
+### Association
 has_many :comments 
 has_many :likes
 has_many :tweets
@@ -74,7 +74,7 @@ has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'fo
 has_many :followers, through: :reverse_of_relationships, source: :user
 
 
-## tweetsテーブル
+# tweetsテーブル
 |Column        | Type      |Options                    |
 |--------------|-----------|---------------------------|
 |user          |references |null:false,foreign_key:true|
@@ -82,47 +82,47 @@ has_many :followers, through: :reverse_of_relationships, source: :user
 |text          |text       |null:false                 |
 
 
-# Association
+### Association
 belongs_to :user
 has_many: comments 
 has_many :likes
 
 
-## commentsテーブル
+# commentsテーブル
 |Column        | Type      |Options                    |
 |--------------|-----------|---------------------------|
 |user          |references |null:false,foreign_key:true|
 |tweet         |references |null:false,foreign_key:true|
 |text          |text       |null:false                 |
 
-# Association
+### Association
 belongs_to:user
 belongs_to:tweet
 
 
-## likesテーブル
+# likesテーブル
 |Columns   |Type      |Options                    |
 |----------|----------|---------------------------|
 |user      |references|null:false,foreign_key:true|
 |tweet     |references|null:false,foreign_key:true|
 
-# Association
+### Association
 belongs_to :user
 belongs_to :tweet
 
 
-## relationshipsテーブル
+# relationshipsテーブル
 |Columns   |Type      | Options                       |
 |----------|----------|-------------------------------|
 |user      |references|null:false foreign_key: true   |
 |follow    |references|null:false foreign_key: true   |
 
-# Association
+### Association
 belongs_to :user
 belongs_to :follow,class_name: 'User'
 
 
-## petsテーブル
+# petsテーブル
 |Columns    |Type      | Options                        |
 |-----------|----------|--------------------------------|
 |user       |references|null:false,foreign_key:true     |
@@ -132,10 +132,10 @@ belongs_to :follow,class_name: 'User'
 |gender_id  |integer   |null: false                     |     
 |personality|text      |null: false                     |
 
-# Association
+### Association
 belongs_to :user
 
-## plansテーブル
+# plansテーブル
 |Columns   |Type      | Options                     |
 |----------|----------|---------------------------- |
 |user      |references|null:false,foreign_key:true  |
@@ -144,28 +144,28 @@ belongs_to :user
 |start_time|date      |                             |
 |tag       |string    |null: false                  |
 
-# Association
+### Association
  belongs_to :user
 
 
- ## tweet_tagsテーブル
+ # tweet_tagsテーブル
 
 |Columns   |Type      |Options     |
 |----------|----------|------------|
 |name      |string    |null: false |
 
-# Association
+### Association
 has_many :tweet_tag_relations
 has_many :tweets, through: :tweet_tag_relations
 
 
-## tweet_tag_relationsテーブル
+# tweet_tag_relationsテーブル
 
 |Columns    |Type      | Options                        |
 |-----------|----------|--------------------------------|
 |tweet_tag  |references|null:false,foreign_key:true     |
 |tweet      |references|null:false,foreign_key:true     |
 
-# Association
+### Association
 belongs_to :tweet
 belongs_to :tweet_tag
