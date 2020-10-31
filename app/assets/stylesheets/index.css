@@ -279,3 +279,17 @@ nav{
   margin: 30px;
   text-align: center;
 }
+
+.guest{
+  color: darkblue;
+  text-align: center;
+  padding: 30px;
+  margin: 30px;
+  height: 100px;
+  width: 500px;
+  background-color: rgb(156, 185, 248);
+}
+
+.guest:hover{
+  background-color: darkblue;
+}

@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :move_to_index,except:[:index ,:search,:lank]
+  before_action :move_to_index,except:[:index ,:search,:lank,:new_guest]
   before_action :set_tweet,only:[:show,:edit,:update]
 
 
@@ -57,6 +57,19 @@ class TweetsController < ApplicationController
    @all_ranks = Tweet.find(Like.group(:tweet_id).order('count(tweet_id)desc').limit(3).pluck(:tweet_id))
    @tag_lanks = TweetTag.find( TweetTagRelation.group(:tweet_tag_id).order('count(tweet_tag_id)desc').limit(4).pluck(:tweet_tag_id))
  end
+
+
+ def new_guest
+    user = User.find_or_create_by!(email: 'guest@example.com') do |user|
+    user.password = SecureRandom.urlsafe_base64
+    user.nickname = "ゲスト"
+    user.birth= "1997-07-14"   
+  end
+  sign_in user
+  redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+end
+
+
 
 
 private

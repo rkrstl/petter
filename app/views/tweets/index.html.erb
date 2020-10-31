@@ -14,11 +14,14 @@
         <p>ペットの投稿やペットの予定管理ができます</p>
 
       
-
-
-
-       
+    <% unless user_signed_in?%>
+    <div class="guest">
+    <%= link_to 'ゲストログイン（閲覧用）', tweets_guest_sign_in_path, method: :post %>
     </div>
+    <%end%>
+      
+       
+ </div>
 
 </div>
 
