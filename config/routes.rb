@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
- root to: "tweets#index" 
+  
+ post '/tweets/guest_sign_in', to: 'tweets#new_guest'
+ 
+ root to: "tweets#index"
+
+
  resources :plans
  resources :relationships,only: [:create, :destroy] 
  resources :pets do
@@ -9,7 +14,7 @@ Rails.application.routes.draw do
     get 'search'
    end
   end
-  resources :animal_types
+ resources :animal_types
  resources :tweets do
    resources :likes,only: [:create, :destroy]
    resources :comments,only: [:create]
@@ -38,5 +43,7 @@ Rails.application.routes.draw do
     get 'likes'
   end
  end
+
+ 
 
 end
