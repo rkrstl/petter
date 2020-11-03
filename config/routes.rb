@@ -21,6 +21,9 @@ Rails.application.routes.draw do
    collection do
    get 'lank'
    end
+   collection do
+    get 'search'
+  end
  end
 
  resources :users do
