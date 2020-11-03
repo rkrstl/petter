@@ -78,3 +78,4 @@ group :development do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
 end
+gem 'rails-i18n'
