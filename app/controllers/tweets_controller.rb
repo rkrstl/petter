@@ -69,10 +69,11 @@ class TweetsController < ApplicationController
   redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
 end
 
+
 def search
   return nil if params[:keyword] == ""
   tweet_tag = TweetTag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
-  render json:{ keyword: tag }
+  render json:{ keyword: tweet_tag }
 end
 
 
