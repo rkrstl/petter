@@ -111,4 +111,9 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.webpacker.check_yarn_integrity = false
 
+
+  ActionCable.server.config.disable_request_forgery_protection = true
+config.action_cable.url = 'ws://Elastic IP/cable'
+config.action_cable.allowed_request_origins = [ 'http://petter.website/' ]
+
 end
