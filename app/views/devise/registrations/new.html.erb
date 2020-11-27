@@ -60,13 +60,20 @@
 
   <div class="field">
     <%= f.submit "Sign up",class:"submit" %>
-  </div>
+  </div >
+
+すでに登録済みの方はこちら
+<%= render "devise/shared/links" %>
 
 
 <% end %>
 
 </div>
 
-<%= render "devise/shared/links" %>
+
 
 </div>
+
+
+
+<%= render "shared/footer" %>
