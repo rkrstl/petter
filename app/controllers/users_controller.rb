@@ -40,7 +40,6 @@ class UsersController < ApplicationController
 
 
     def follower
-      @pet=Pet.find(params[:id])
       @followers = @user.followers
     end
   

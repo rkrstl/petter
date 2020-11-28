@@ -1,15 +1,20 @@
-
+html,body{
+  background-color:#bc8f8f;
+  height: 100%;
+  color: rgb(68, 65, 65);
+}
 
 
 li {
   list-style: none;
 }
+
 /* これがなかったら大きな空白ができる */
 .wrap {
   overflow: hidden;
 }
+
 a{
- 
   text-decoration: none;
 }
 

@@ -1,12 +1,8 @@
 
 
 .lists-all{
-  
-  overflow: scroll;
-  height: 100vh;
-  
+  height: auto;
 }
-
 
 .list-title{
   width: 800px;
@@ -14,7 +10,6 @@
   font-size: 20px;
   margin:100px 5%  1px 5% ;
 }
-
 
 .lists-pet-name{
   font-size: 20px;
@@ -30,18 +25,14 @@
   margin:5%;
   width: 400px;
   height: 200px;
-
 }
 
 .lists-user-individual{
   background-color: rgba(255, 255, 255, 0.2);
   width: 800px;
   height:170px ;
- 
   border: 1px solid dimgray;
- 
   padding:10px;
-  
 }
 
 .lists-image{
@@ -77,3 +68,4 @@
  display: flex;
   
 }
+
