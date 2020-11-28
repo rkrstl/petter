@@ -79,3 +79,4 @@ group :development do
   gem 'rubocop-rspec'
 end
 gem 'rails-i18n'
+gem 'kaminari'

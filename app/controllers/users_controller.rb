@@ -11,14 +11,12 @@ class UsersController < ApplicationController
     end
 
     def update
-      
       if @user.update(user_params)
         redirect_to root_path
       else
         render 'edit'
       end
     end
-
 
     def mypage
     end
@@ -30,7 +28,7 @@ class UsersController < ApplicationController
     end
 
     def lists
-      @pets = Pet.all
+      @pets = Pet.page(params[:page]).per(5)
       @users=User.all
     end
 
@@ -48,11 +46,7 @@ class UsersController < ApplicationController
     end
   
   
-
-
   private
-
-
   def move_to_index
     unless user_signed_in?
       redirect_to new_user_session_path
@@ -66,6 +60,4 @@ class UsersController < ApplicationController
   def set_user
     @user=User.find(params[:id])
   end
-  
-
 end
