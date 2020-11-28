@@ -15,7 +15,7 @@
         <%else%>
         <%=image_tag 'default.jpg',class:"lists-icon"%>
       <%end%>
-      </div>
+     </div>
 
       <div class="lists-pets-detail">
         
@@ -30,9 +30,11 @@
           </div>
         <div><i class="fas fa-user"></i> user name : <%=link_to pet.user.nickname,detail_user_path(pet.user)%></div>
      </div>
-
     </div>
     <%end%>
+
+<%= paginate @pets %>
+
 
 </div>
 
