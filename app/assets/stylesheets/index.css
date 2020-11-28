@@ -4,6 +4,10 @@ html,body{
   color: rgb(68, 65, 65);
 }
 
+a:hover {
+  text-decoration: none;
+  }
+
 
 li {
   list-style: none;
